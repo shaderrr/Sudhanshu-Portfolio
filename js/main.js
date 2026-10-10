@@ -14,6 +14,11 @@
  * 9. Interactive FAQ Accordion & Mobile Navigation
  */
 
+import Lenis from 'lenis';
+if (typeof window !== 'undefined') {
+  window.Lenis = Lenis;
+}
+
 (function () {
   'use strict';
 
