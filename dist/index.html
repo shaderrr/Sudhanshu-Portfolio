@@ -1,0 +1,1925 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sudhanshu Sakhare — Creative Full-Stack & 3D Web Architect</title>
+  <meta name="description" content="Portfolio of Sudhanshu Sakhare, an independent Creative Full-Stack Developer and UI/UX Designer based in Pune, India. Specializing in high-performance WebGL, Three.js, and bespoke digital platforms.">
+  <meta name="keywords" content="Sudhanshu Sakhare, 3D Web Developer, Three.js, WebGL, Creative Developer Pune, Full-Stack Developer, React, Next.js, Univercell Canada, Lifero Clinics, Primalfa">
+  <meta name="author" content="Sudhanshu Sakhare">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sudhanshuportfolio.in/">
+  <meta property="og:title" content="Sudhanshu Sakhare — Creative Full-Stack & 3D Web Architect">
+  <meta property="og:description" content="Editorial White & Black portfolio with emerald accents, interactive 3D WebGL labs, stacking scroll showcases, and high-performance digital platforms.">
+  <meta property="og:image" content="/assets/profile-Caml1FVR.webp">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/logo-BhJkfUy8.png">
+
+  <!-- Stylesheet -->
+  <script type="module" crossorigin src="/assets/index-DRtT9gBz.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DaKl11ew.css">
+</head>
+<body>
+
+  <!-- Top Scroll Progress Bar -->
+  <div class="scroll-progress-bar" id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Custom Cursor for Desktop -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- Floating Archive Image Hover Preview Container -->
+  <div class="floating-preview-box" id="floating-preview-box" aria-hidden="true">
+    <img id="floating-preview-img" src="" alt="Project Preview">
+    <div class="floating-preview-meta">
+      <span id="floating-preview-title" class="preview-title">Project Name</span>
+      <span id="floating-preview-cat" class="preview-cat">Discipline</span>
+    </div>
+  </div>
+
+  <!-- Background Ambient Glow & Grid -->
+  <div class="bg-ambient" aria-hidden="true">
+    <div class="ambient-grid"></div>
+  </div>
+
+  <!-- ==========================================================================
+       Header & Navigation (Ultra-Minimalist, Sleek, Refined)
+       ========================================================================== -->
+  <header class="header-nav" id="main-header">
+    <div class="nav-container">
+      
+      <!-- Brand Name -->
+      <a href="#home" class="logo-link">
+        <span class="logo-title">SUDHANSHU</span>
+        <span class="logo-status-dot" title="Available for Projects"></span>
+      </a>
+
+      <!-- Desktop Nav Menu: Clean & Curated -->
+      <nav class="nav-center">
+        <ul class="nav-menu">
+          <li><a href="#projects" class="nav-link">Work</a></li>
+          <li><a href="#offerings" class="nav-link">Solutions</a></li>
+          <li><a href="#tech-stack" class="nav-link">Stack</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Action Items (Minimal, Clean) -->
+      <div class="nav-actions">
+        <!-- Minimal Theme Switcher (Round Icon Button) -->
+        <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Theme Mode" title="Toggle Theme">
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+
+        <!-- Minimal Accent Swatch (Round Dot Button) -->
+        <div class="accent-picker-wrap">
+          <button class="accent-picker-btn" id="accent-picker-btn" aria-label="Choose Accent Palette" title="Accent Color">
+            <span class="accent-dot-current" id="current-accent-dot"></span>
+          </button>
+          <div class="accent-picker-menu" id="accent-picker-menu" aria-hidden="true">
+            <div class="accent-menu-header">ACCENT PALETTE</div>
+            <button class="accent-choice-item active" data-accent="emerald" title="Emerald Green">
+              <span class="choice-dot" style="background: #16a34a;"></span>
+              <span>Emerald</span>
+            </button>
+            <button class="accent-choice-item" data-accent="indigo" title="Electric Indigo">
+              <span class="choice-dot" style="background: #4f46e5;"></span>
+              <span>Indigo</span>
+            </button>
+            <button class="accent-choice-item" data-accent="cyan" title="Cyan Horizon">
+              <span class="choice-dot" style="background: #0891b2;"></span>
+              <span>Cyan</span>
+            </button>
+            <button class="accent-choice-item" data-accent="amber" title="Solar Amber">
+              <span class="choice-dot" style="background: #d97706;"></span>
+              <span>Amber</span>
+            </button>
+            <button class="accent-choice-item" data-accent="rose" title="Hyper Rose">
+              <span class="choice-dot" style="background: #e11d48;"></span>
+              <span>Rose</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Sleek Contact CTA -->
+        <a href="#contact" class="btn-primary-sm">Get in Touch</a>
+
+        <!-- Minimal Hamburger for Mobile -->
+        <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle Menu">
+          <span class="hamburger-line line-1"></span>
+          <span class="hamburger-line line-2"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Full-Screen Mobile Drawer (Clean & Curated) -->
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+    <div class="mobile-nav-inner">
+      <ul class="mobile-nav-links">
+        <li><a href="#projects" class="mobile-nav-item">Work</a></li>
+        <li><a href="#offerings" class="mobile-nav-item">Solutions</a></li>
+        <li><a href="#tech-stack" class="mobile-nav-item">Stack</a></li>
+        <li><a href="#about" class="mobile-nav-item">About</a></li>
+        <li><a href="#contact" class="mobile-nav-item">Contact</a></li>
+        <li><a href="assets/SudhanshuSakhare_Resume.pdf" target="_blank" class="mobile-nav-item mobile-resume">Resume (PDF) ↗</a></li>
+      </ul>
+      <div class="mobile-nav-meta">
+        <div class="mobile-status-row">
+          <span class="status-dot"></span>
+          <span>Pune, India • Open for Global Remote</span>
+        </div>
+        <div class="mobile-social-row">
+          <a href="https://wa.me/qr/VIO63XZTISFCD1" target="_blank">WhatsApp</a>
+          <a href="http://www.linkedin.com/in/sudhanshu-sakhare-211442249" target="_blank">LinkedIn</a>
+          <a href="https://www.instagram.com/sudhanshu5367/" target="_blank">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Hero Section: Kinetic Typography & Studio Portrait
+       ========================================================================== -->
+  <section id="home" class="hero-section">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Left Column: Typography & Bio -->
+        <div class="hero-content">
+          <div class="hero-badge-row reveal-on-scroll">
+            <span class="hero-meta-badge">
+              <span class="status-dot"></span> Available for Q2/Q3 Engagements
+            </span>
+            <span class="hero-meta-badge">Pune, India & Global Remote</span>
+          </div>
+
+          <h1 class="hero-headline reveal-on-scroll reveal-delay-1">
+            <span class="text-white">Crafting Scalable</span><br>
+            <span class="highlight-green">Modern Web Applications</span><br>
+            <span class="text-white">That Deliver Results</span>
+          </h1>
+
+          <p class="hero-subhead reveal-on-scroll reveal-delay-2">
+            I'm <strong>Sudhanshu Sakhare</strong>, an independent Creative Full-Stack Developer and UI/UX Designer based in Pune, India. I craft minimal, high-impact digital experiences, bespoke web applications, and high-performance digital platforms for forward-thinking brands.
+          </p>
+
+          <div class="hero-actions reveal-on-scroll reveal-delay-3">
+            <a href="#projects" class="btn btn-primary">
+              <span>View Selected Work</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+            <a href="#tech-stack" class="btn btn-secondary">
+              <span>Explore Tech Stack</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </a>
+            <a href="assets/SudhanshuSakhare_Resume.pdf" target="_blank" class="btn btn-secondary">
+              <span>Resume (PDF)</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            </a>
+          </div>
+
+          <!-- Quick Metrics Bar -->
+          <div class="hero-stats-bar reveal-on-scroll reveal-delay-3">
+            <div class="stat-item">
+              <div class="stat-number"><span class="stat-counter" data-target="15">0</span><span>+</span></div>
+              <div class="stat-label">Commercial Platforms</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number"><span class="stat-counter" data-target="100">0</span><span>%</span></div>
+              <div class="stat-label">Client Satisfaction</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number"><span class="stat-counter" data-target="2">0</span><span>+</span></div>
+              <div class="stat-label">Years of Mastery</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Clean Studio Portrait (No 3D Shader Behind Photo) -->
+        <div class="hero-visual reveal-on-scroll reveal-delay-2">
+          <div class="hero-portrait-frame">
+            <div class="portrait-photo-container">
+              <img src="/assets/profile-Caml1FVR.webp" alt="Sudhanshu Sakhare — Creative Developer & UI/UX" class="portrait-photo">
+            </div>
+            <div class="portrait-glass-footer">
+              <div>
+                <div class="portrait-name">Sudhanshu Sakhare</div>
+                <div class="portrait-role">
+                  <span class="status-dot"></span> Full-Stack Developer & Designer
+                </div>
+              </div>
+              <span class="badge-category-tag">Pune, IN</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Kinetic Infinite Marquee Ribbons (Dual Direction)
+       ========================================================================== -->
+  <section class="marquee-ribbon-section" aria-hidden="true">
+    <div class="marquee-track track-forward">
+      <div class="marquee-content">
+        <span>FULL-STACK ARCHITECTURE</span>
+        <span class="marquee-sep">•</span>
+        <span>TYPESCRIPT & NEXT.JS</span>
+        <span class="marquee-sep">•</span>
+        <span>RESPONSIVE UI/UX</span>
+        <span class="marquee-sep">•</span>
+        <span>TAILWIND & UI SYSTEMS</span>
+        <span class="marquee-sep">•</span>
+        <span>CORE WEB VITALS 98+</span>
+        <span class="marquee-sep">•</span>
+        <span>REACT & NODE.JS</span>
+        <span class="marquee-sep">•</span>
+      </div>
+      <div class="marquee-content" aria-hidden="true">
+        <span>FULL-STACK ARCHITECTURE</span>
+        <span class="marquee-sep">•</span>
+        <span>TYPESCRIPT & NEXT.JS</span>
+        <span class="marquee-sep">•</span>
+        <span>RESPONSIVE UI/UX</span>
+        <span class="marquee-sep">•</span>
+        <span>TAILWIND & UI SYSTEMS</span>
+        <span class="marquee-sep">•</span>
+        <span>CORE WEB VITALS 98+</span>
+        <span class="marquee-sep">•</span>
+        <span>REACT & NODE.JS</span>
+        <span class="marquee-sep">•</span>
+      </div>
+    </div>
+
+    <div class="marquee-track track-reverse">
+      <div class="marquee-content">
+        <span>PUNE, INDIA</span>
+        <span class="marquee-sep">•</span>
+        <span>SUB-SECOND LOAD TIMES</span>
+        <span class="marquee-sep">•</span>
+        <span>60 FPS FLUIDITY</span>
+        <span class="marquee-sep">•</span>
+        <span>GLOBAL CLIENTS</span>
+        <span class="marquee-sep">•</span>
+        <span>BESPOKE ENGINEERING</span>
+        <span class="marquee-sep">•</span>
+        <span>FIGMA DESIGN SYSTEMS</span>
+        <span class="marquee-sep">•</span>
+      </div>
+      <div class="marquee-content" aria-hidden="true">
+        <span>PUNE, INDIA</span>
+        <span class="marquee-sep">•</span>
+        <span>SUB-SECOND LOAD TIMES</span>
+        <span class="marquee-sep">•</span>
+        <span>60 FPS FLUIDITY</span>
+        <span class="marquee-sep">•</span>
+        <span>GLOBAL CLIENTS</span>
+        <span class="marquee-sep">•</span>
+        <span>BESPOKE ENGINEERING</span>
+        <span class="marquee-sep">•</span>
+        <span>FIGMA DESIGN SYSTEMS</span>
+        <span class="marquee-sep">•</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Vinay Jain Style Kinetic Typographic Parallax Header Section
+       ========================================================================== -->
+  <section class="kinetic-statement-section" id="statement" aria-label="Statement Typography">
+    <div class="kinetic-statement-wrap">
+      <div class="kinetic-line line-left" id="kinetic-line-1">
+        <span>CREATIVE DIRECTION</span>
+        <span class="highlight-accent">✦</span>
+        <span class="outline-text">DESIGN ENGINEER</span>
+        <span class="highlight-accent">✦</span>
+        <span>CREATIVE DIRECTION</span>
+      </div>
+      <div class="kinetic-line line-right" id="kinetic-line-2">
+        <span class="outline-text">HIGH-CONVERSION</span>
+        <span class="highlight-accent">✦</span>
+        <span>FULL-STACK ARCHITECT</span>
+        <span class="highlight-accent">✦</span>
+        <span class="outline-text">HIGH-CONVERSION</span>
+      </div>
+    </div>
+    <div class="kinetic-sub-row">
+      <span>PUNE, MAHARASHTRA • OPERATING NATIONALLY & REMOTELY</span>
+      <span class="highlight-green">CORE SPECIALIZATION: REACT • NEXT.JS • TYPESCRIPT • UI/UX SYSTEMS</span>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       The Design Trip Style Selected Brands & Global Collabs
+       ========================================================================== -->
+  <section id="brands" class="brands-partners-section">
+    <div class="container">
+      
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tag">// CLIENT ECOSYSTEM & DEMO SHOWCASE</span>
+        <h2 class="section-title">
+          Brands That Chose <span class="highlight-green">Clarity Over Noise</span>
+        </h2>
+        <p class="section-description">
+          A track record of collaborating with ambitious founders, telecommunications brands, clinical institutions, and digital disruptors across global markets.
+        </p>
+      </div>
+
+      <!-- Architectural Dot Matrix Grid -->
+      <div class="brands-dot-grid reveal-on-scroll reveal-delay-1">
+        
+        <!-- Cell 1: Univercell -->
+        <a href="https://univercellcanada.com/" target="_blank" rel="noopener noreferrer" class="brand-cell">
+          <div class="brand-cell-top">
+            <div>
+              <div class="brand-name">Univercell</div>
+              <div class="brand-category">Telecom & E-Commerce</div>
+            </div>
+            <span class="brand-arrow">↗</span>
+          </div>
+          <div class="brand-cell-bottom">
+            <span class="brand-metric">+42% Inquiries</span>
+            <span class="brand-location">Ontario, Canada</span>
+          </div>
+        </a>
+
+        <!-- Cell 2: Lifero Clinics -->
+        <a href="https://liferoclinics.com/hair-treatment/" target="_blank" rel="noopener noreferrer" class="brand-cell">
+          <div class="brand-cell-top">
+            <div>
+              <div class="brand-name">Lifero Clinics</div>
+              <div class="brand-category">Healthcare & Dermatology</div>
+            </div>
+            <span class="brand-arrow">↗</span>
+          </div>
+          <div class="brand-cell-bottom">
+            <span class="brand-metric">+180% Bookings</span>
+            <span class="brand-location">Pune, India</span>
+          </div>
+        </a>
+
+        <!-- Cell 3: Skild AI Labs -->
+        <div class="brand-cell">
+          <div class="brand-cell-top">
+            <div>
+              <div class="brand-name">Skild AI Labs</div>
+              <div class="brand-category">Spatial Intelligence</div>
+            </div>
+            <span class="brand-arrow">↗</span>
+          </div>
+          <div class="brand-cell-bottom">
+            <span class="brand-metric">60 FPS WebGL</span>
+            <span class="brand-location">San Francisco, USA</span>
+          </div>
+        </div>
+
+        <!-- Cell 4: FinVortex SaaS -->
+        <a href="#contact" class="brand-cell">
+          <div class="brand-cell-top">
+            <div>
+              <div class="brand-name">FinVortex SaaS</div>
+              <div class="brand-category">Fintech & Data Visuals</div>
+            </div>
+            <span class="brand-arrow">↗</span>
+          </div>
+          <div class="brand-cell-bottom">
+            <span class="brand-metric">&lt; 50ms Latency</span>
+            <span class="brand-location">London, UK</span>
+          </div>
+        </a>
+
+        <!-- Cell 5: Metaroll -->
+        <div class="brand-cell">
+          <div class="brand-cell-top">
+            <div>
+              <div class="brand-name">Metaroll Studio</div>
+              <div class="brand-category">Industrial & Web Design</div>
+            </div>
+            <span class="brand-arrow">↗</span>
+          </div>
+          <div class="brand-cell-bottom">
+            <span class="brand-metric">0.85s FCP</span>
+            <span class="brand-location">Mumbai, India</span>
+          </div>
+        </div>
+
+        <!-- Cell 6: Alt+ Beauty -->
+        <div class="brand-cell">
+          <div class="brand-cell-top">
+            <div>
+              <div class="brand-name">Alt+ Beauty</div>
+              <div class="brand-category">D2C & Packaging</div>
+            </div>
+            <span class="brand-arrow">↗</span>
+          </div>
+          <div class="brand-cell-bottom">
+            <span class="brand-metric">Foxglove Finalist</span>
+            <span class="brand-location">Bengaluru, India</span>
+          </div>
+        </div>
+
+        <!-- Cell 7: Panchkosha -->
+        <div class="brand-cell">
+          <div class="brand-cell-top">
+            <div>
+              <div class="brand-name">Panchkosha</div>
+              <div class="brand-category">Wellness & Narrative</div>
+            </div>
+            <span class="brand-arrow">↗</span>
+          </div>
+          <div class="brand-cell-bottom">
+            <span class="brand-metric">99.98% Uptime</span>
+            <span class="brand-location">Goa, India</span>
+          </div>
+        </div>
+
+        <!-- Cell 8: Primalfa -->
+        <a href="https://primalfa.com/" target="_blank" rel="noopener noreferrer" class="brand-cell">
+          <div class="brand-cell-top">
+            <div>
+              <div class="brand-name">Primalfa Retail</div>
+              <div class="brand-category">Lifestyle Commerce</div>
+            </div>
+            <span class="brand-arrow">↗</span>
+          </div>
+          <div class="brand-cell-bottom">
+            <span class="brand-metric">3-Step Checkout</span>
+            <span class="brand-location">Pune, India</span>
+          </div>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Sticky Stacking Cards Showcase Deck (Selected Works)
+       ========================================================================== -->
+  <section id="projects" class="stacking-projects-section" data-scroll-section="stacking-cards">
+    <div class="container">
+      
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tag">// SELECTED COMMERCIAL WORKS</span>
+        <h2 class="section-title">
+          Curated Case Studies & <span class="highlight-green">Platforms</span>
+        </h2>
+        <p class="section-description">
+          Live commercial portals, healthcare booking engines, and 3D web applications engineered for speed, conversion, and distinct visual identity. Scroll down to unpack each card.
+        </p>
+      </div>
+
+      <!-- Stacking Cards Scroll Element Attribute Tracker (thedesigntrip / vinayjain style) -->
+      <div class="stacking-attribute-tracker" id="stackingAttributeTracker" data-attribute="scroll-tracker" aria-live="polite">
+        <div class="tracker-item active-indicator">
+          <span class="tracker-pulse"></span>
+          <span class="tracker-card-num" id="trackerCardNum">01 / 06</span>
+        </div>
+        <div class="tracker-divider"></div>
+        <div class="tracker-title-wrap">
+          <span class="tracker-label">ACTIVE CASE STUDY</span>
+          <span class="tracker-title" id="trackerCardTitle">Univercell Canada</span>
+        </div>
+        <div class="tracker-divider"></div>
+        <div class="tracker-progress-wrap">
+          <span class="tracker-progress-text" id="trackerProgressPercent">16%</span>
+          <div class="tracker-progress-bar">
+            <div class="tracker-progress-fill" id="trackerProgressFill" style="width: 16.66%;"></div>
+          </div>
+        </div>
+        <div class="tracker-divider"></div>
+        <div class="tracker-scroll-prompt">
+          <span>Scroll to stack</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+        </div>
+      </div>
+
+      <!-- Stacking Deck Container -->
+      <div class="stacking-deck" id="stackingDeck" data-attribute="stacking-container" data-total-cards="6">
+
+        <!-- Card 1: Univercell Canada -->
+        <article class="stack-card" style="--stack-index: 1;" data-stack-card="true" data-card-index="1" data-card-title="Univercell Canada" data-next-bridge="false" data-state="active">
+          <div class="stack-card-inner">
+            <div class="stack-card-content">
+              <div class="stack-card-header">
+                <span class="stack-index-num">01 / 06</span>
+                <span class="badge-live-tag">
+                  <span class="status-dot"></span> Live Client Work
+                </span>
+              </div>
+
+              <div class="stack-meta-row">
+                <span class="stack-client-name">Univercell Tech Inc.</span>
+                <span class="stack-year">2024</span>
+              </div>
+
+              <h3 class="stack-title">Univercell Canada</h3>
+              <p class="stack-desc">
+                High-performance e-commerce and brand presence engineered for a major Canadian telecommunications brand. Combines sleek dark-mode aesthetics, responsive hardware catalogs, and sub-second page transitions.
+              </p>
+
+              <div class="stack-tech-chips">
+                <span class="tech-chip">React.js</span>
+                <span class="tech-chip">E-Commerce</span>
+                <span class="tech-chip">UI/UX Systems</span>
+                <span class="tech-chip">Core Web Vitals</span>
+              </div>
+
+              <div class="stack-metrics-grid">
+                <div class="metric-mini-box">
+                  <span class="metric-label">Inquiry Lift</span>
+                  <span class="metric-val">+42%</span>
+                </div>
+                <div class="metric-mini-box">
+                  <span class="metric-label">First Contentful Paint</span>
+                  <span class="metric-val">0.85s</span>
+                </div>
+                <div class="metric-mini-box">
+                  <span class="metric-label">Client Market</span>
+                  <span class="metric-val">Canada / US</span>
+                </div>
+              </div>
+
+              <div class="stack-actions">
+                <button class="btn btn-primary btn-inspect" data-project="univercell">
+                  <span>Inspect Case Study</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+                <a href="https://univercellcanada.com/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                  <span>Visit Live</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="stack-card-visual">
+              <div class="browser-frame">
+                <div class="browser-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <img src="/assets/univercell-BHlZoI42.png" alt="Univercell Canada Case Study" class="browser-mockup-img">
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: Lifero Clinics -->
+        <article class="stack-card" style="--stack-index: 2;" data-stack-card="true" data-card-index="2" data-card-title="Lifero Clinics" data-next-bridge="false" data-state="stacked">
+          <div class="stack-card-inner">
+            <div class="stack-card-content">
+              <div class="stack-card-header">
+                <span class="stack-index-num">02 / 06</span>
+                <span class="badge-live-tag">
+                  <span class="status-dot"></span> Clinical Ecosystem
+                </span>
+              </div>
+
+              <div class="stack-meta-row">
+                <span class="stack-client-name">Lifero Clinics Pune</span>
+                <span class="stack-year">2024</span>
+              </div>
+
+              <h3 class="stack-title">Lifero Clinics</h3>
+              <p class="stack-desc">
+                Clinical medical web platform architected for a top healthcare institution in Pune. Features streamlined treatment exploration, before/after galleries, appointment funnels, and high trust signals.
+              </p>
+
+              <div class="stack-tech-chips">
+                <span class="tech-chip">WordPress Architecture</span>
+                <span class="tech-chip">Medical UI/UX</span>
+                <span class="tech-chip">Lead Funnels</span>
+                <span class="tech-chip">SEO Schema</span>
+              </div>
+
+              <div class="stack-metrics-grid">
+                <div class="metric-mini-box">
+                  <span class="metric-label">Patient Bookings</span>
+                  <span class="metric-val">+180%</span>
+                </div>
+                <div class="metric-mini-box">
+                  <span class="metric-label">Lighthouse Score</span>
+                  <span class="metric-val">98/100</span>
+                </div>
+                <div class="metric-mini-box">
+                  <span class="metric-label">Location</span>
+                  <span class="metric-val">Pune, IN</span>
+                </div>
+              </div>
+
+              <div class="stack-actions">
+                <button class="btn btn-primary btn-inspect" data-project="lifero">
+                  <span>Inspect Case Study</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+                <a href="https://liferoclinics.com/hair-treatment/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                  <span>Visit Live</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="stack-card-visual">
+              <div class="browser-frame">
+                <div class="browser-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <img src="/assets/lifero-DeMJ4sXP.png" alt="Lifero Clinics Case Study" class="browser-mockup-img">
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3: NeoCore SaaS Platform -->
+        <article class="stack-card" style="--stack-index: 3;" data-stack-card="true" data-card-index="3" data-card-title="NeoCore SaaS Platform" data-next-bridge="false" data-state="stacked">
+          <div class="stack-card-inner">
+            <div class="stack-card-content">
+              <div class="stack-card-header">
+                <span class="stack-index-num">03 / 06</span>
+                <span class="badge-live-tag">
+                  <span class="status-dot"></span> Interactive 3D Lab
+                </span>
+              </div>
+
+              <div class="stack-meta-row">
+                <span class="stack-client-name">Enterprise Cloud Analytics</span>
+                <span class="stack-year">2024</span>
+              </div>
+
+              <h3 class="stack-title">NeoCore SaaS Platform</h3>
+              <p class="stack-desc">
+                Next-generation cloud telemetry and telemetry analytics dashboard featuring real-time data streaming, interactive SVG metric visualizations, and responsive enterprise workflows operating with sub-second latency.
+              </p>
+
+              <div class="stack-tech-chips">
+                <span class="tech-chip">TypeScript</span>
+                <span class="tech-chip">Next.js</span>
+                <span class="tech-chip">Tailwind CSS</span>
+                <span class="tech-chip">REST & GraphQL</span>
+              </div>
+
+              <div class="stack-metrics-grid">
+                <div class="metric-mini-box">
+                  <span class="metric-label">Render Speed</span>
+                  <span class="metric-val">&lt; 50ms</span>
+                </div>
+                <div class="metric-mini-box">
+                  <span class="metric-label">Bundle Weight</span>
+                  <span class="metric-val">&lt; 140 KB</span>
+                </div>
+                <div class="metric-mini-box">
+                  <span class="metric-label">Architecture</span>
+                  <span class="metric-val">Modular</span>
+                </div>
+              </div>
+
+              <div class="stack-actions">
+                <button class="btn btn-primary btn-inspect" data-project="cyber3d">
+                  <span>Inspect Case Study</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+                <a href="#tech-stack" class="btn btn-secondary">
+                  <span>Explore Tech Stack</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="stack-card-visual">
+              <div class="browser-frame">
+                <div class="browser-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <img src="/assets/cyber3d-IDog8yxQ.jpg" alt="NeoCore SaaS Platform Preview" class="browser-mockup-img">
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4: FinVortex SaaS Dashboard -->
+        <article class="stack-card" style="--stack-index: 4;" data-stack-card="true" data-card-index="4" data-card-title="FinVortex SaaS Dashboard" data-next-bridge="false" data-state="stacked">
+          <div class="stack-card-inner">
+            <div class="stack-card-content">
+              <div class="stack-card-header">
+                <span class="stack-index-num">04 / 06</span>
+                <span class="badge-live-tag">
+                  <span class="status-dot"></span> Fintech & Analytics
+                </span>
+              </div>
+
+              <div class="stack-meta-row">
+                <span class="stack-client-name">FinVortex SaaS Inc.</span>
+                <span class="stack-year">2024</span>
+              </div>
+
+              <h3 class="stack-title">FinVortex SaaS Dashboard</h3>
+              <p class="stack-desc">
+                Futuristic cryptocurrency and financial analytics web platform designed with obsidian glassmorphism, interactive time-series visualizations, and instant data reactivity.
+              </p>
+
+              <div class="stack-tech-chips">
+                <span class="tech-chip">React.js</span>
+                <span class="tech-chip">TypeScript</span>
+                <span class="tech-chip">Data Visuals</span>
+                <span class="tech-chip">Glassmorphism</span>
+              </div>
+
+              <div class="stack-metrics-grid">
+                <div class="metric-mini-box">
+                  <span class="metric-label">Latency</span>
+                  <span class="metric-val">&lt; 50ms</span>
+                </div>
+                <div class="metric-mini-box">
+                  <span class="metric-label">Component Count</span>
+                  <span class="metric-val">45+ Tokens</span>
+                </div>
+                <div class="metric-mini-box">
+                  <span class="metric-label">Architecture</span>
+                  <span class="metric-val">Modular SPA</span>
+                </div>
+              </div>
+
+              <div class="stack-actions">
+                <button class="btn btn-primary btn-inspect" data-project="fintech">
+                  <span>Inspect Case Study</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+                <a href="#contact" class="btn btn-secondary">
+                  <span>Request Full Demo</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="stack-card-visual">
+              <div class="browser-frame">
+                <div class="browser-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <img src="/assets/fintech-Bc88dNeD.jpg" alt="FinVortex Dashboard Preview" class="browser-mockup-img">
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 5: Primalfa E-Commerce -->
+        <article class="stack-card" style="--stack-index: 5;" data-stack-card="true" data-card-index="5" data-card-title="Primalfa E-Commerce" data-next-bridge="false" data-state="stacked">
+          <div class="stack-card-inner">
+            <div class="stack-card-content">
+              <div class="stack-card-header">
+                <span class="stack-index-num">05 / 06</span>
+                <span class="badge-live-tag">
+                  <span class="status-dot"></span> Commercial Retail
+                </span>
+              </div>
+
+              <div class="stack-meta-row">
+                <span class="stack-client-name">Primalfa Brand</span>
+                <span class="stack-year">2023</span>
+              </div>
+
+              <h3 class="stack-title">Primalfa</h3>
+              <p class="stack-desc">
+                Foundational e-commerce project built as a premier freelancer in Pune. Complete commercial storefront with custom catalog navigation, seamless checkout, and brand styling.
+              </p>
+
+              <div class="stack-tech-chips">
+                <span class="tech-chip">E-Commerce Dev</span>
+                <span class="tech-chip">Payment Gateway</span>
+                <span class="tech-chip">Brand Identity</span>
+                <span class="tech-chip">Responsive UX</span>
+              </div>
+
+              <div class="stack-metrics-grid">
+                <div class="metric-mini-box">
+                  <span class="metric-label">Checkout Speed</span>
+                  <span class="metric-val">3 Steps</span>
+                </div>
+                <div class="metric-mini-box">
+                  <span class="metric-label">Uptime</span>
+                  <span class="metric-val">99.98%</span>
+                </div>
+                <div class="metric-mini-box">
+                  <span class="metric-label">Role</span>
+                  <span class="metric-val">Solo Dev</span>
+                </div>
+              </div>
+
+              <div class="stack-actions">
+                <button class="btn btn-primary btn-inspect" data-project="primalfa">
+                  <span>Inspect Case Study</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+                <a href="https://primalfa.com/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                  <span>Visit Live</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="stack-card-visual">
+              <div class="browser-frame">
+                <div class="browser-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <img src="/assets/primalfa-BWEyPOIX.png" alt="Primalfa Case Study" class="browser-mockup-img">
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 6: Architectural Bridge into Solutions That Go Beyond Services -->
+        <article class="stack-card stack-card-bridge" id="stackCardBridge" style="--stack-index: 6;" data-stack-card="true" data-card-index="6" data-card-title="Solutions That Go Beyond Services" data-next-bridge="true" data-state="stacked">
+          <div class="stack-card-inner bridge-inner">
+            <div class="stack-card-content bridge-content">
+              <div class="stack-card-header">
+                <span class="stack-index-num bridge-badge">06 / 06 // BRIDGE ELEMENT</span>
+                <span class="badge-live-tag bridge-tag">
+                  <span class="status-dot"></span> Next Section Reveal
+                </span>
+              </div>
+
+              <div class="stack-meta-row">
+                <span class="stack-client-name">Architecture & Capabilities</span>
+                <span class="stack-year">2024 — 2025</span>
+              </div>
+
+              <h3 class="stack-title bridge-title">Solutions That Go <span class="highlight-green">Beyond Services</span></h3>
+              <p class="stack-desc bridge-desc">
+                From completed client portals into comprehensive value architecture. Seamlessly transitioning to core engineering pillars, conversion optimization, and visual design systems.
+              </p>
+
+              <div class="stack-tech-chips">
+                <span class="tech-chip highlight-chip">Web Architecture</span>
+                <span class="tech-chip highlight-chip">Conversion UX</span>
+                <span class="tech-chip highlight-chip">Visual Identity</span>
+                <span class="tech-chip highlight-chip">Sub-Second Speed</span>
+              </div>
+
+              <div class="bridge-actions-grid">
+                <a href="#offerings" class="btn btn-primary bridge-cta-btn">
+                  <span>Enter Architectural Solutions</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                  <span>Book Strategy Call</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="stack-card-visual bridge-visual">
+              <div class="bridge-preview-card">
+                <div class="bridge-preview-header">
+                  <span class="bridge-preview-dot"></span>
+                  <span class="bridge-preview-tag">CONTINUE SCROLLING</span>
+                </div>
+                <div class="bridge-preview-body">
+                  <div class="bridge-pillar-item">
+                    <span class="pillar-num">01</span>
+                    <div class="pillar-text">
+                      <h4>Custom Frontend Engineering</h4>
+                      <p>React, Next.js, TypeScript & clean modular vanilla DOM</p>
+                    </div>
+                  </div>
+                  <div class="bridge-pillar-item">
+                    <span class="pillar-num">02</span>
+                    <div class="pillar-text">
+                      <h4>Speed & Conversion Architecture</h4>
+                      <p>95+ Google PageSpeed, zero CLS & sub-second FCP</p>
+                    </div>
+                  </div>
+                  <div class="bridge-pillar-item">
+                    <span class="pillar-num">03</span>
+                    <div class="pillar-text">
+                      <h4>Visual Distinctiveness</h4>
+                      <p>Tactile micro-animations, curated typography & dark mode</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="bridge-scroll-dock-hint">
+                  <div class="scroll-dock-indicator">
+                    <span class="dock-arrow">↓</span>
+                    <span>Scroll places this card into Value Architecture below</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       The Design Trip Style Solutions That Go Beyond Services
+       ========================================================================== -->
+  <section id="offerings" class="offerings-section" data-scroll-destination="offerings">
+    <div class="container">
+
+      <!-- Seamless Bridge Anchor from Stacking Cards -->
+      <div class="section-bridge-connector" data-bridge-received="true">
+        <span class="connector-line"></span>
+        <span class="connector-pill">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+          Placed From Commercial Works Deck
+        </span>
+        <span class="connector-line"></span>
+      </div>
+      
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tag">// VALUE ARCHITECTURE & CAPABILITIES</span>
+        <h2 class="section-title">
+          Solutions That Go <span class="highlight-green">Beyond Services</span>
+        </h2>
+        <p class="section-description">
+          Engineered for brands that refuse to blend into the background. Every engagement delivers tangible digital equity, measurable speed, and visual distinctiveness.
+        </p>
+      </div>
+
+      <div class="offerings-deck reveal-on-scroll reveal-delay-1">
+        
+        <!-- Offering 1 -->
+        <div class="offering-card">
+          <div class="offering-num">01</div>
+          <div class="offering-info">
+            <h3>Interactive UI Engineering & Web Applications</h3>
+            <div class="offering-chips">
+              <span class="offering-chip">Modern JavaScript</span>
+              <span class="offering-chip">React & Next.js</span>
+              <span class="offering-chip">Tailwind CSS</span>
+              <span class="offering-chip">60 FPS Fluidity</span>
+            </div>
+          </div>
+          <p class="offering-desc">
+            Transform passive visitors into engaged clients. Bespoke front-end applications, dynamic state flows, and reactive interfaces engineered for instant interactivity across desktop and mobile.
+          </p>
+        </div>
+
+        <!-- Offering 2 -->
+        <div class="offering-card">
+          <div class="offering-num">02</div>
+          <div class="offering-info">
+            <h3>Full-Stack Platform Architecture</h3>
+            <div class="offering-chips">
+              <span class="offering-chip">React & Next.js</span>
+              <span class="offering-chip">TypeScript</span>
+              <span class="offering-chip">Headless WordPress</span>
+              <span class="offering-chip">REST APIs</span>
+            </div>
+          </div>
+          <p class="offering-desc">
+            Enterprise web systems built from the ground up with zero bloated dependencies. Scalable component architecture, server-side caching, and sub-50ms data pipelines tailored to your business model.
+          </p>
+        </div>
+
+        <!-- Offering 3 -->
+        <div class="offering-card">
+          <div class="offering-num">03</div>
+          <div class="offering-info">
+            <h3>Motion Choreography & Micro-Interactions</h3>
+            <div class="offering-chips">
+              <span class="offering-chip">Tactile Physics</span>
+              <span class="offering-chip">Magnetic Cursor</span>
+              <span class="offering-chip">Scroll Parallax</span>
+              <span class="offering-chip">Awwwards Finish</span>
+            </div>
+          </div>
+          <p class="offering-desc">
+            Interfaces that feel physically alive under user fingers. Seamless page transitions, magnetic attraction physics, and subtle micro-feedback loops that remove friction and maximize conversion.
+          </p>
+        </div>
+
+        <!-- Offering 4 -->
+        <div class="offering-card">
+          <div class="offering-num">04</div>
+          <div class="offering-info">
+            <h3>Design Systems & Figma Prototyping</h3>
+            <div class="offering-chips">
+              <span class="offering-chip">Token Systems</span>
+              <span class="offering-chip">Typography Scales</span>
+              <span class="offering-chip">WCAG 2.1 AA</span>
+              <span class="offering-chip">Design-to-Code</span>
+            </div>
+          </div>
+          <p class="offering-desc">
+            Holistic brand languages translated into systematic design tokens. High-fidelity Figma prototypes tested with real users before writing a single line of production code.
+          </p>
+        </div>
+
+        <!-- Offering 5 -->
+        <div class="offering-card">
+          <div class="offering-num">05</div>
+          <div class="offering-info">
+            <h3>Sub-Second Speed & Core Web Vitals</h3>
+            <div class="offering-chips">
+              <span class="offering-chip">Lighthouse 98+</span>
+              <span class="offering-chip">0.8s FCP</span>
+              <span class="offering-chip">Zero Layout Shift</span>
+              <span class="offering-chip">SEO Hygiene</span>
+            </div>
+          </div>
+          <p class="offering-desc">
+            Obsessive performance engineering. Asset minification, tree-shaking, automated WebP compression, and structured JSON-LD schema that secure top-tier organic search rankings and instant response.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Project Archive Table with Floating Image Hover Reveal
+       ========================================================================== -->
+  <section id="archive" class="archive-section">
+    <div class="container">
+      
+      <div class="archive-header reveal-on-scroll">
+        <div>
+          <span class="section-tag">// INDEX & EXPERIMENTAL ARCHIVE</span>
+          <h2 class="section-title">
+            Curated <span class="highlight-green">Work Index</span>
+          </h2>
+        </div>
+        <p class="archive-header-desc">
+          Hover over any row to preview the live project capture. An archive of client systems, research experiments, and web architectures.
+        </p>
+      </div>
+
+      <div class="archive-table reveal-on-scroll reveal-delay-1">
+        
+        <!-- Row 1 -->
+        <a href="https://univercellcanada.com/" target="_blank" rel="noopener noreferrer" class="archive-row" data-preview-img="assets/univercell.png" data-preview-title="Univercell Canada" data-preview-cat="Telecommunications & E-Commerce">
+          <div class="archive-cell cell-num">01</div>
+          <div class="archive-cell cell-title">
+            <span class="row-name">Univercell Canada</span>
+            <span class="row-sub">North America Tech Brand</span>
+          </div>
+          <div class="archive-cell cell-category">Web Architecture / React</div>
+          <div class="archive-cell cell-year">2024</div>
+          <div class="archive-cell cell-link">
+            <span>Explore</span>
+            <span class="arrow-icon">↗</span>
+          </div>
+        </a>
+
+        <!-- Row 2 -->
+        <a href="https://liferoclinics.com/hair-treatment/" target="_blank" rel="noopener noreferrer" class="archive-row" data-preview-img="assets/lifero.png" data-preview-title="Lifero Clinics" data-preview-cat="Clinical Healthcare Ecosystem">
+          <div class="archive-cell cell-num">02</div>
+          <div class="archive-cell cell-title">
+            <span class="row-name">Lifero Clinics</span>
+            <span class="row-sub">Medical Institution Pune</span>
+          </div>
+          <div class="archive-cell cell-category">WordPress / Custom Lead Funnels</div>
+          <div class="archive-cell cell-year">2024</div>
+          <div class="archive-cell cell-link">
+            <span>Explore</span>
+            <span class="arrow-icon">↗</span>
+          </div>
+        </a>
+
+        <!-- Row 3 -->
+        <a href="#projects" class="archive-row" data-preview-img="assets/cyber3d.jpg" data-preview-title="NeoCore SaaS Platform" data-preview-cat="TypeScript & Interactive Analytics">
+          <div class="archive-cell cell-num">03</div>
+          <div class="archive-cell cell-title">
+            <span class="row-name">NeoCore SaaS Platform</span>
+            <span class="row-sub">Analytics & Telemetry Platform</span>
+          </div>
+          <div class="archive-cell cell-category">TypeScript / Next.js / API</div>
+          <div class="archive-cell cell-year">2024</div>
+          <div class="archive-cell cell-link">
+            <span>Explore</span>
+            <span class="arrow-icon">↗</span>
+          </div>
+        </a>
+
+        <!-- Row 4 -->
+        <a href="#contact" class="archive-row" data-preview-img="assets/fintech.jpg" data-preview-title="FinVortex SaaS" data-preview-cat="Next-Gen Financial Dashboard">
+          <div class="archive-cell cell-num">04</div>
+          <div class="archive-cell cell-title">
+            <span class="row-name">FinVortex SaaS</span>
+            <span class="row-sub">Analytics & Market Intelligence</span>
+          </div>
+          <div class="archive-cell cell-category">React / TypeScript / Glassmorphism</div>
+          <div class="archive-cell cell-year">2024</div>
+          <div class="archive-cell cell-link">
+            <span>Explore</span>
+            <span class="arrow-icon">↗</span>
+          </div>
+        </a>
+
+        <!-- Row 5 -->
+        <a href="https://primalfa.com/" target="_blank" rel="noopener noreferrer" class="archive-row" data-preview-img="assets/primalfa.png" data-preview-title="Primalfa Store" data-preview-cat="Commercial Storefront & Gateways">
+          <div class="archive-cell cell-num">05</div>
+          <div class="archive-cell cell-title">
+            <span class="row-name">Primalfa</span>
+            <span class="row-sub">Lifestyle E-Commerce</span>
+          </div>
+          <div class="archive-cell cell-category">E-Commerce Dev / Payment APIs</div>
+          <div class="archive-cell cell-year">2023</div>
+          <div class="archive-cell cell-link">
+            <span>Explore</span>
+            <span class="arrow-icon">↗</span>
+          </div>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Architectural Technical Stack (Fast, Minimal, Zero WebGL Overhead)
+       ========================================================================== -->
+  <section id="tech-stack" class="tech-stack-section">
+    <div class="container">
+      
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tag">// ARCHITECTURAL STACK & TOOLCHAINS</span>
+        <h2 class="section-title">
+          Engineered With <span class="highlight-green">Modern Foundations</span>
+        </h2>
+        <p class="section-description">
+          A curated breakdown of frontend engineering, design systems, server architecture, and performance toolchains I leverage to construct robust digital products.
+        </p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="tech-filter-bar reveal-on-scroll reveal-delay-1">
+        <button class="tech-filter-btn active" data-filter="all">All Stack</button>
+        <button class="tech-filter-btn" data-filter="frontend">Frontend & Core</button>
+        <button class="tech-filter-btn" data-filter="design">UI/UX & Systems</button>
+        <button class="tech-filter-btn" data-filter="backend">Backend & CMS</button>
+        <button class="tech-filter-btn" data-filter="performance">Speed & SEO</button>
+      </div>
+
+      <!-- Architectural Tech Cards Grid -->
+      <div class="tech-cards-grid reveal-on-scroll reveal-delay-2" id="tech-cards-grid">
+        
+        <!-- Card 1: React & Next.js -->
+        <div class="tech-card" data-category="frontend">
+          <div class="tech-card-top">
+            <span class="tech-card-num">01</span>
+            <span class="tech-card-category">Frontend Architecture</span>
+          </div>
+          <h3 class="tech-card-title">React.js & Next.js</h3>
+          <p class="tech-card-desc">
+            Production React application architecture, Next.js App Router, SSR/SSG workflows, reactive state workflows, and fast client-side routing.
+          </p>
+          <div class="tech-chip-list">
+            <span class="tech-pill">Next.js 15</span>
+            <span class="tech-pill">React 19</span>
+            <span class="tech-pill">Server Components</span>
+            <span class="tech-pill">Zustand</span>
+          </div>
+          <div class="skill-meter-header">
+            <span>PROFICIENCY</span>
+            <span>96%</span>
+          </div>
+          <div class="skill-meter">
+            <div class="skill-meter-fill" style="width: 96%;"></div>
+          </div>
+        </div>
+
+        <!-- Card 2: TypeScript & ESNext -->
+        <div class="tech-card" data-category="frontend">
+          <div class="tech-card-top">
+            <span class="tech-card-num">02</span>
+            <span class="tech-card-category">Core Language</span>
+          </div>
+          <h3 class="tech-card-title">TypeScript & ESNext</h3>
+          <p class="tech-card-desc">
+            Strict type-safe interfaces, asynchronous event pipelines, DOM rendering engine mastery, and native browser Web APIs.
+          </p>
+          <div class="tech-chip-list">
+            <span class="tech-pill">TypeScript</span>
+            <span class="tech-pill">ESNext</span>
+            <span class="tech-pill">Web APIs</span>
+            <span class="tech-pill">Clean Code</span>
+          </div>
+          <div class="skill-meter-header">
+            <span>PROFICIENCY</span>
+            <span>98%</span>
+          </div>
+          <div class="skill-meter">
+            <div class="skill-meter-fill" style="width: 98%;"></div>
+          </div>
+        </div>
+
+        <!-- Card 3: Modern CSS & Motion -->
+        <div class="tech-card" data-category="frontend">
+          <div class="tech-card-top">
+            <span class="tech-card-num">03</span>
+            <span class="tech-card-category">Styling & Motion</span>
+          </div>
+          <h3 class="tech-card-title">Modern CSS & Motion Systems</h3>
+          <p class="tech-card-desc">
+            Responsive CSS Grid, Flexbox layouts, fluid clamp typography, hardware-accelerated keyframe choreography, and light/dark theme tokens.
+          </p>
+          <div class="tech-chip-list">
+            <span class="tech-pill">Vanilla CSS</span>
+            <span class="tech-pill">Fluid Clamp</span>
+            <span class="tech-pill">CSS Grid</span>
+            <span class="tech-pill">Micro-Interactions</span>
+          </div>
+          <div class="skill-meter-header">
+            <span>PROFICIENCY</span>
+            <span>98%</span>
+          </div>
+          <div class="skill-meter">
+            <div class="skill-meter-fill" style="width: 98%;"></div>
+          </div>
+        </div>
+
+        <!-- Card 4: Figma & Design Systems -->
+        <div class="tech-card" data-category="design">
+          <div class="tech-card-top">
+            <span class="tech-card-num">04</span>
+            <span class="tech-card-category">UI/UX & Systems</span>
+          </div>
+          <h3 class="tech-card-title">Figma & Design Systems</h3>
+          <p class="tech-card-desc">
+            High-fidelity interactive prototyping, user journey mapping, design token systems, wireframes, and dark/light typography scales.
+          </p>
+          <div class="tech-chip-list">
+            <span class="tech-pill">Figma</span>
+            <span class="tech-pill">Design Tokens</span>
+            <span class="tech-pill">Auto Layout</span>
+            <span class="tech-pill">Wireframing</span>
+          </div>
+          <div class="skill-meter-header">
+            <span>PROFICIENCY</span>
+            <span>94%</span>
+          </div>
+          <div class="skill-meter">
+            <div class="skill-meter-fill" style="width: 94%;"></div>
+          </div>
+        </div>
+
+        <!-- Card 5: Node.js & Express -->
+        <div class="tech-card" data-category="backend">
+          <div class="tech-card-top">
+            <span class="tech-card-num">05</span>
+            <span class="tech-card-category">Backend Services</span>
+          </div>
+          <h3 class="tech-card-title">Node.js & Express APIs</h3>
+          <p class="tech-card-desc">
+            Scalable microservices, RESTful API architecture, authentication schemes, server-side caching, and database integrations.
+          </p>
+          <div class="tech-chip-list">
+            <span class="tech-pill">Node.js</span>
+            <span class="tech-pill">Express</span>
+            <span class="tech-pill">REST APIs</span>
+            <span class="tech-pill">JWT Auth</span>
+          </div>
+          <div class="skill-meter-header">
+            <span>PROFICIENCY</span>
+            <span>88%</span>
+          </div>
+          <div class="skill-meter">
+            <div class="skill-meter-fill" style="width: 88%;"></div>
+          </div>
+        </div>
+
+        <!-- Card 6: WordPress Architecture -->
+        <div class="tech-card" data-category="backend">
+          <div class="tech-card-top">
+            <span class="tech-card-num">06</span>
+            <span class="tech-card-category">CMS & Platforms</span>
+          </div>
+          <h3 class="tech-card-title">WordPress Architecture</h3>
+          <p class="tech-card-desc">
+            Custom theme development from scratch, Elementor Pro advanced engineering, WooCommerce integrations, and custom REST API endpoints.
+          </p>
+          <div class="tech-chip-list">
+            <span class="tech-pill">Custom Themes</span>
+            <span class="tech-pill">WooCommerce</span>
+            <span class="tech-pill">PHP</span>
+            <span class="tech-pill">Elementor Pro</span>
+          </div>
+          <div class="skill-meter-header">
+            <span>PROFICIENCY</span>
+            <span>92%</span>
+          </div>
+          <div class="skill-meter">
+            <div class="skill-meter-fill" style="width: 92%;"></div>
+          </div>
+        </div>
+
+        <!-- Card 7: Core Web Vitals & SEO -->
+        <div class="tech-card" data-category="performance">
+          <div class="tech-card-top">
+            <span class="tech-card-num">07</span>
+            <span class="tech-card-category">Auditing & Speed</span>
+          </div>
+          <h3 class="tech-card-title">Core Web Vitals & SEO</h3>
+          <p class="tech-card-desc">
+            Lighthouse 95+ Core Web Vitals optimization, asset preloading, image compression pipelines, semantic HTML5, and rich JSON-LD schema.
+          </p>
+          <div class="tech-chip-list">
+            <span class="tech-pill">Lighthouse 95+</span>
+            <span class="tech-pill">Sub-1s FCP</span>
+            <span class="tech-pill">Schema.org</span>
+            <span class="tech-pill">Asset Optimization</span>
+          </div>
+          <div class="skill-meter-header">
+            <span>PROFICIENCY</span>
+            <span>96%</span>
+          </div>
+          <div class="skill-meter">
+            <div class="skill-meter-fill" style="width: 96%;"></div>
+          </div>
+        </div>
+
+        <!-- Card 8: Tailwind CSS & Component Systems -->
+        <div class="tech-card" data-category="design">
+          <div class="tech-card-top">
+            <span class="tech-card-num">08</span>
+            <span class="tech-card-category">Component Architecture</span>
+          </div>
+          <h3 class="tech-card-title">Tailwind CSS & UI Systems</h3>
+          <p class="tech-card-desc">
+            Utility-first CSS patterns, accessible component integrations, keyboard navigation, and custom design token extensions.
+          </p>
+          <div class="tech-chip-list">
+            <span class="tech-pill">Tailwind CSS</span>
+            <span class="tech-pill">Radix UI</span>
+            <span class="tech-pill">Accessible UX</span>
+            <span class="tech-pill">Component Tokens</span>
+          </div>
+          <div class="skill-meter-header">
+            <span>PROFICIENCY</span>
+            <span>95%</span>
+          </div>
+          <div class="skill-meter">
+            <div class="skill-meter-fill" style="width: 95%;"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Vinay Jain Style Curated Experience & Milestones Timeline
+       ========================================================================== -->
+  <section id="experience" class="experience-section">
+    <div class="container">
+      
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tag">// CURATED CAREER & ENGAGEMENTS</span>
+        <h2 class="section-title">
+          Selected <span class="highlight-green">Milestones & Roles</span>
+        </h2>
+        <p class="section-description">
+          A progression of technical engineering leadership, international commercial platform deliveries, and creative digital architecture.
+        </p>
+      </div>
+
+      <div class="experience-table reveal-on-scroll reveal-delay-1">
+        
+        <!-- Milestone 1 -->
+        <div class="experience-row">
+          <div class="exp-year">2026</div>
+          <div class="exp-company">Independent Studio</div>
+          <div class="exp-role">Creative Full-Stack & 3D Web Architect • Spearheading bespoke WebGL platforms, high-converting React apps, and design tokens for international founders.</div>
+          <div class="exp-location">Pune & Remote</div>
+          <div class="exp-arrow">↗</div>
+        </div>
+
+        <!-- Milestone 2 -->
+        <div class="experience-row">
+          <div class="exp-year">2025</div>
+          <div class="exp-company">Savit Interactive & Tech Labs</div>
+          <div class="exp-role">Senior Frontend Engineer & Project Lead • Managed client platform sprints, headless CMS builds, Core Web Vitals audits, and interactive motion systems.</div>
+          <div class="exp-location">India</div>
+          <div class="exp-arrow">↗</div>
+        </div>
+
+        <!-- Milestone 3 -->
+        <div class="experience-row">
+          <div class="exp-year">2024</div>
+          <div class="exp-company">Univercell Tech Inc.</div>
+          <div class="exp-role">Lead Web Architect • Executed full design and development of Canadian telecommunications commerce platform achieving 0.85s FCP and +42% inquiry lift.</div>
+          <div class="exp-location">North America</div>
+          <div class="exp-arrow">↗</div>
+        </div>
+
+        <!-- Milestone 4 -->
+        <div class="experience-row">
+          <div class="exp-year">2023</div>
+          <div class="exp-company">Healthcare & Commercial Brands</div>
+          <div class="exp-role">Full-Stack Digital Consultant • Engineered clinical booking ecosystems for Lifero Clinics (+180% patient bookings) and Primalfa e-commerce storefronts.</div>
+          <div class="exp-location">Pune, IN</div>
+          <div class="exp-arrow">↗</div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Out-of-the-Box Refreshing Feature: Interactive Code & Sensory Playground
+       ========================================================================== -->
+  <section id="playground" class="playground-section">
+    <div class="container">
+      
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tag">// CREATIVE ENGINEERING EXPERIMENTS</span>
+        <h2 class="section-title">
+          Interactive Code & <span class="highlight-green">Sensory Lab</span>
+        </h2>
+        <p class="section-description">
+          A showcase of interactive micro-systems built directly into this portfolio. Play with magnetic spring physics, real-time cryptography, canvas wavefields, and live telemetry.
+        </p>
+      </div>
+
+      <div class="playground-grid reveal-on-scroll reveal-delay-1">
+        
+        <!-- Experiment 1: Magnetic Target -->
+        <div class="playground-card" id="magnetic-card">
+          <div class="playground-badge">
+            <span class="status-dot"></span> EXPERIMENT 01
+          </div>
+          <h3 class="playground-title">Magnetic Spring Physics</h3>
+          <p class="playground-desc">
+            Cursor-tracking spring elasticity. Move your mouse or finger near the button to feel it dynamically attract with smooth inertia.
+          </p>
+          <div class="playground-interactive-area magnetic-btn-wrap" id="magnetic-wrap">
+            <button class="magnetic-btn" id="magnetic-button">
+              <span>Magnetic Attraction</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Experiment 2: Cyber Text Decryptor -->
+        <div class="playground-card">
+          <div class="playground-badge">
+            <span class="status-dot"></span> EXPERIMENT 02
+          </div>
+          <h3 class="playground-title">Hacker Cryptographic Decryptor</h3>
+          <p class="playground-desc">
+            Real-time character scrambler. Hover or tap the token below to initiate procedural glyph decoding that resolves character-by-character.
+          </p>
+          <div class="playground-interactive-area">
+            <div class="decrypt-box">
+              <span class="decrypt-target" id="decrypt-element" data-target="SUDHANSHU.3D_SYS">HOVER TO DECRYPT</span>
+              <div class="decrypt-hint">Interactive glyph shuffle with deterministic resolution</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experiment 3: Liquid Light Ripple Canvas -->
+        <div class="playground-card">
+          <div class="playground-badge">
+            <span class="status-dot"></span> EXPERIMENT 03
+          </div>
+          <h3 class="playground-title">Liquid Light Waveform Canvas</h3>
+          <p class="playground-desc">
+            HTML5 2D canvas particle wavefield. Move your pointer across the pad to spawn luminous emerald fluid ripples with alpha decay.
+          </p>
+          <div class="playground-interactive-area" style="padding: 0;">
+            <div class="ripple-canvas-wrap">
+              <canvas id="playground-canvas"></canvas>
+              <div class="canvas-hint-overlay">✦ Move cursor inside to generate ripples</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experiment 4: Live Telemetry & Device HUD -->
+        <div class="playground-card">
+          <div class="playground-badge">
+            <span class="status-dot"></span> EXPERIMENT 04
+          </div>
+          <h3 class="playground-title">Live Client Telemetry HUD</h3>
+          <p class="playground-desc">
+            Real-time diagnostics reading live browser performance, monitor DPR, DOM nodes, and requestAnimationFrame render velocity.
+          </p>
+          <div class="playground-interactive-area">
+            <div class="telemetry-grid">
+              <div class="telemetry-item">
+                <span class="telemetry-label">RENDER FRAME RATE</span>
+                <span class="telemetry-val" id="telemetry-fps">60 FPS</span>
+              </div>
+              <div class="telemetry-item">
+                <span class="telemetry-label">DEVICE PIXEL RATIO</span>
+                <span class="telemetry-val" id="telemetry-dpr">2.0x DPR</span>
+              </div>
+              <div class="telemetry-item">
+                <span class="telemetry-label">VIEWPORT RESOLUTION</span>
+                <span class="telemetry-val" id="telemetry-res">1920x1080</span>
+              </div>
+              <div class="telemetry-item">
+                <span class="telemetry-label">ACTIVE DOM NODES</span>
+                <span class="telemetry-val" id="telemetry-nodes">420 Nodes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Scroll-Triggered Philosophy Manifesto
+       ========================================================================== -->
+  <section class="manifesto-section" id="manifesto">
+    <div class="container">
+      <div class="manifesto-inner reveal-on-scroll">
+        <span class="manifesto-tag">// STUDIO PHILOSOPHY</span>
+        <div class="manifesto-text" id="manifesto-container">
+          <span class="manifesto-line active">I believe digital products shouldn't just function — </span>
+          <span class="manifesto-line active highlight">they should feel unforgettable. </span>
+          <span class="manifesto-line">Clarity always triumphs over visual noise. </span>
+          <span class="manifesto-line">Every millisecond of latency is a lost opportunity to connect with an audience. </span>
+          <span class="manifesto-line">By merging computational discipline with architectural aesthetics, </span>
+          <span class="manifesto-line highlight">code transforms into a powerful competitive advantage. </span>
+          <span class="manifesto-line">Engineered in Pune, built for the world.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Engineering Method / The 4-Stage Studio Process
+       ========================================================================== -->
+  <section id="process" class="process-section">
+    <div class="container">
+      
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tag">// HOW I DELIVER</span>
+        <h2 class="section-title">
+          The Disciplined <span class="highlight-green">Methodology</span>
+        </h2>
+        <p class="section-description">
+          A proven 4-stage engineering lifecycle designed to transform complex commercial specifications into effortless, memorable digital experiences.
+        </p>
+      </div>
+
+      <div class="process-timeline reveal-on-scroll reveal-delay-1">
+        
+        <div class="process-step-item">
+          <div class="step-num-pill">01</div>
+          <div class="step-card">
+            <span class="step-tag">DISCOVERY & ARCHITECTURE</span>
+            <h3 class="step-title">Strategic Blueprint</h3>
+            <p class="step-desc">
+              Thorough audit of commercial objectives, user conversion funnels, brand visual identity, and performance budgets before writing code.
+            </p>
+            <div class="step-meta-chips">
+              <span>Technical Specs</span>
+              <span>Information Architecture</span>
+              <span>Competitive Audit</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="process-step-item">
+          <div class="step-num-pill">02</div>
+          <div class="step-card">
+            <span class="step-tag">UI/UX & INTERACTIVE PROTOTYPING</span>
+            <h3 class="step-title">Interactive Design Systems</h3>
+            <p class="step-desc">
+              High-fidelity interactive prototypes in Figma, bespoke typography scales, and responsive design system engineering for immediate tangible feedback.
+            </p>
+            <div class="step-meta-chips">
+              <span>Figma Prototypes</span>
+              <span>Design Tokens</span>
+              <span>Micro-Interactions</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="process-step-item">
+          <div class="step-num-pill">03</div>
+          <div class="step-card">
+            <span class="step-tag">CLEAN FULL-STACK CODE</span>
+            <h3 class="step-title">Modular Engineering</h3>
+            <p class="step-desc">
+              Writing production-ready React, Next.js, TypeScript, and custom WordPress systems with clean separation of concerns and zero bloat.
+            </p>
+            <div class="step-meta-chips">
+              <span>Component Architecture</span>
+              <span>TypeScript</span>
+              <span>State Machines</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="process-step-item">
+          <div class="step-num-pill">04</div>
+          <div class="step-card">
+            <span class="step-tag">LAUNCH & CORE WEB VITALS</span>
+            <h3 class="step-title">Performance Calibration</h3>
+            <p class="step-desc">
+              Rigorous cross-device testing, Core Web Vitals optimization for sub-second FCP, structured SEO schema, and seamless server deployment.
+            </p>
+            <div class="step-meta-chips">
+              <span>Lighthouse 95+</span>
+              <span>Schema Markup</span>
+              <span>Automated Deploy</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       About & Technical Philosophy (Clean Editorial)
+       ========================================================================== -->
+  <section id="about" class="about-section">
+    <div class="container">
+      
+      <div class="about-grid">
+        
+        <!-- Left: Statement & Bio -->
+        <div class="about-narrative reveal-on-scroll">
+          <span class="section-tag">// ABOUT & PHILOSOPHY</span>
+          <h2 class="about-headline">
+            Bridging Creative Artistry with <span class="highlight-green">Rigorous Engineering</span>
+          </h2>
+          <p class="about-text">
+            Based in Pune, India, I operate at the intersection of aesthetic design and technical architecture. I believe websites should never feel slow, generic, or bloated — every transition should feel intentional, every layout responsive, and every interaction memorable.
+          </p>
+          <p class="about-text">
+            Over the past several years, I have worked with international founders, medical clinics, and growing brands to design digital products that elevate their credibility and drive measurable inquiries.
+          </p>
+
+          <div class="about-meta-list">
+            <div class="about-meta-item">
+              <span class="meta-label">Location</span>
+              <span class="meta-value">Pune, Maharashtra, India</span>
+            </div>
+            <div class="about-meta-item">
+              <span class="meta-label">Role</span>
+              <span class="meta-value">Creative Full-Stack & UI/UX Developer</span>
+            </div>
+            <div class="about-meta-item">
+              <span class="meta-label">Focus</span>
+              <span class="meta-value">High-Performance Web Applications & Platforms</span>
+            </div>
+            <div class="about-meta-item">
+              <span class="meta-label">Availability</span>
+              <span class="meta-value highlight-green">Accepting New Client Work</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Capabilities Cards -->
+        <div class="about-capabilities reveal-on-scroll reveal-delay-1">
+          
+          <div class="capability-card">
+            <div class="capability-num">01</div>
+            <h3 class="capability-title">Interactive UI & Frontend Architecture</h3>
+            <p class="capability-desc">
+              Production React & Next.js architectures, modern state workflows, and micro-interactions optimized for buttery 60+ FPS performance on mobile and desktop alike.
+            </p>
+          </div>
+
+          <div class="capability-card">
+            <div class="capability-num">02</div>
+            <h3 class="capability-title">Bespoke Full-Stack Engineering</h3>
+            <p class="capability-desc">
+              From React and Next.js applications to custom WordPress architectures, built cleanly from scratch without unnecessary third-party plugins.
+            </p>
+          </div>
+
+          <div class="capability-card">
+            <div class="capability-num">03</div>
+            <h3 class="capability-title">UI/UX Systems in Figma</h3>
+            <p class="capability-desc">
+              Editorial typography, high-contrast dark modes, intuitive user flows, and cohesive design token systems tailored specifically for your brand.
+            </p>
+          </div>
+
+          <div class="capability-card">
+            <div class="capability-num">04</div>
+            <h3 class="capability-title">Sub-Second Load Times</h3>
+            <p class="capability-desc">
+              Obsessive performance tuning ensuring 95+ scores on Google Lighthouse, rapid First Contentful Paint, and rock-solid SEO hygiene.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Contact Section: Minimalist Direct Channels & Inquiries
+       ========================================================================== -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tag">// GET IN TOUCH</span>
+        <h2 class="section-title">
+          Let's Build Something <span class="highlight-green">Exceptional Together</span>
+        </h2>
+        <p class="section-description">
+          Have an upcoming project, need to build a high-performance web platform, or looking for a full-stack engineer? Connect directly via WhatsApp or send a message below.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        
+        <!-- Contact Info Column -->
+        <div class="contact-info-col reveal-on-scroll reveal-delay-1">
+          
+          <!-- WhatsApp Quick Chat -->
+          <a href="https://wa.me/qr/VIO63XZTISFCD1" target="_blank" rel="noopener noreferrer" class="contact-card-item">
+            <div class="contact-icon-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            </div>
+            <div>
+              <div class="contact-item-title">Chat on WhatsApp</div>
+              <div class="contact-item-detail">Quick answers for urgent projects</div>
+            </div>
+            <span class="contact-arrow">↗</span>
+          </a>
+
+          <!-- LinkedIn Connect -->
+          <a href="http://www.linkedin.com/in/sudhanshu-sakhare-211442249" target="_blank" rel="noopener noreferrer" class="contact-card-item">
+            <div class="contact-icon-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </div>
+            <div>
+              <div class="contact-item-title">Connect on LinkedIn</div>
+              <div class="contact-item-detail">Professional network & recommendations</div>
+            </div>
+            <span class="contact-arrow">↗</span>
+          </a>
+
+          <!-- Instagram Connect -->
+          <a href="https://www.instagram.com/sudhanshu5367/" target="_blank" rel="noopener noreferrer" class="contact-card-item">
+            <div class="contact-icon-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </div>
+            <div>
+              <div class="contact-item-title">Follow on Instagram</div>
+              <div class="contact-item-detail">@sudhanshu5367 • Design & code updates</div>
+            </div>
+            <span class="contact-arrow">↗</span>
+          </a>
+
+          <!-- Location & Live Pune Time Card -->
+          <div class="contact-card-item non-link">
+            <div class="contact-icon-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <div>
+              <div class="contact-item-title" id="pune-time-display">Pune, IN • Loading...</div>
+              <div class="contact-item-detail">Maharashtra, India (UTC +5:30)</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-box reveal-on-scroll reveal-delay-2">
+          <form id="portfolio-contact-form">
+            
+            <div class="form-group">
+              <label for="contact-name" class="form-label">YOUR NAME *</label>
+              <input type="text" id="contact-name" class="form-input" placeholder="e.g. Alex Vance" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email" class="form-label">YOUR EMAIL ADDRESS *</label>
+              <input type="email" id="contact-email" class="form-input" placeholder="e.g. alex@company.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-subject" class="form-label">PROJECT TYPE</label>
+              <select id="contact-subject" class="form-input" style="cursor: pointer;">
+                <option value="Full-Stack Web App">Full-Stack Web Application</option>
+                <option value="Custom Web Platform">Custom Web Platform</option>
+                <option value="UI/UX Redesign">UI/UX Design & Prototyping</option>
+                <option value="WordPress Platform">WordPress Custom Development</option>
+                <option value="General Consultation">General Inquiry</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message" class="form-label">PROJECT DETAILS / MESSAGE *</label>
+              <textarea id="contact-message" class="form-textarea" placeholder="Describe your project, timeline, or objectives..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <span>Send Message</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Interactive Case Study Deep-Dive Modal
+       ========================================================================== -->
+  <div id="case-study-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-container">
+      
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <div id="modal-client" class="modal-proj-client">CLIENT SPECIFICATION</div>
+          <h3 id="modal-title" class="modal-proj-title">Project Title</h3>
+        </div>
+        <button id="modal-close-btn" class="modal-close-btn" aria-label="Close Case Study Modal">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-image-preview">
+          <img id="modal-img" src="" alt="Project Preview">
+        </div>
+
+        <div id="modal-specs" class="modal-specs-grid">
+          <!-- Populated by JavaScript -->
+        </div>
+
+        <h4 class="modal-section-title">Project Overview</h4>
+        <p id="modal-overview" class="modal-text"></p>
+
+        <h4 class="modal-section-title">The Challenge</h4>
+        <p id="modal-challenge" class="modal-text"></p>
+
+        <h4 class="modal-section-title">Engineering Solution</h4>
+        <p id="modal-solution" class="modal-text"></p>
+      </div>
+
+      <div class="modal-footer">
+        <a id="modal-live-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          <span>Open Live Site</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="footer-title">SUDHANSHU SAKHARE</span>
+          <span class="footer-sub">Creative Full-Stack Web Architect & UI/UX Designer • Pune, India</span>
+        </div>
+
+        <div class="footer-social-links">
+          <a href="https://wa.me/qr/VIO63XZTISFCD1" target="_blank" rel="noopener noreferrer" class="social-circle-link" title="WhatsApp Chat">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+          </a>
+          <a href="http://www.linkedin.com/in/sudhanshu-sakhare-211442249" target="_blank" rel="noopener noreferrer" class="social-circle-link" title="LinkedIn Profile">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+          <a href="https://www.instagram.com/sudhanshu5367/" target="_blank" rel="noopener noreferrer" class="social-circle-link" title="Instagram Profile">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="assets/SudhanshuSakhare_Resume.pdf" target="_blank" class="social-circle-link" title="Resume PDF">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Sudhanshu Sakhare. All rights reserved. Architectural White & Black Edition.
+        </div>
+        <button id="btn-back-to-top" class="btn-back-top">
+          <span>Back to Top</span>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
+        </button>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Application Script -->
+</body>
+</html>

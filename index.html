@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sudhanshu Sakhare — Creative Full-Stack Architect & AI Systems</title>
+  <meta name="description" content="Portfolio of Sudhanshu Sakhare, an independent Creative Full-Stack Architect and Systems Engineer based in Pune, India. Specializing in high-performance web applications, interactive 3D, and workflow automation.">
+  <meta name="keywords" content="Sudhanshu Sakhare, Creative Developer, Full-Stack Architect, AI Automation, Three.js, WebGL, Next.js, Pune, India, Batavia, Univercell, Lifero Clinics">
+  <meta name="author" content="Sudhanshu Sakhare">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sudhanshuportfolio.in/">
+  <meta property="og:title" content="Sudhanshu Sakhare — Creative Full-Stack Architect & AI Systems">
+  <meta property="og:description" content="Clear. Precise. Engineered. Bespoke digital architectures, stacking case studies, and intelligent workflow systems.">
+  <meta property="og:image" content="assets/hero-monolith.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <!-- Google Fonts: Geist & Geist Mono (Official Variable Font Range 100-900) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Scroll Progress Bar -->
+  <div class="scroll-progress-bar" id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       Header & Floating Navigation (Sanjaya Style)
+       ========================================================================== -->
+  <header class="header-nav" id="main-header">
+    <div class="nav-container">
+      
+      <!-- Brand Logo -->
+      <a href="#home" class="logo-link">
+        <div class="logo-symbol" aria-hidden="true"></div>
+        <span class="logo-title">sudhanshu</span>
+        <span class="logo-status-dot" title="Available for New Projects"></span>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="nav-center">
+        <ul class="nav-menu">
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#integration" class="nav-link">Integration</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Action Items -->
+      <div class="nav-actions">
+        <a href="#contact" class="btn-consultation">Get Free Consultation</a>
+
+        <!-- Minimal Hamburger for Mobile -->
+        <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle Menu">
+          <span class="hamburger-line line-1"></span>
+          <span class="hamburger-line line-2"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="modal-overlay" id="mobile-drawer" style="display: none;">
+    <div class="modal-window" style="max-width: 400px; text-align: center;">
+      <button class="modal-close-btn" id="mobile-drawer-close">&times;</button>
+      <div class="modal-title" style="margin-bottom: 24px;">Navigation</div>
+      <ul style="display: flex; flex-direction: column; gap: 18px; font-size: 18px;">
+        <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+        <li><a href="#how-it-works" class="mobile-nav-link">How It Works</a></li>
+        <li><a href="#services" class="mobile-nav-link">Services</a></li>
+        <li><a href="#integration" class="mobile-nav-link">Integration</a></li>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#faq" class="mobile-nav-link">FAQ</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+        <li><a href="assets/SudhanshuSakhare_Resume.pdf" target="_blank" style="color: var(--accent-green);">Resume (PDF) ↗</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ==========================================================================
+         HERO SECTION (Exact Sanjaya Framer Layout)
+         ========================================================================== -->
+    <section id="home" class="sanjaya-hero-section">
+      <!-- Cinematic Background with Obsidian Monolith -->
+      <div class="hero-bg-layer" aria-hidden="true">
+        <div class="hero-bg-image" id="hero-parallax-bg"></div>
+        <div class="hero-bg-gradient"></div>
+      </div>
+
+      <div class="hero-container">
+        
+        <!-- Top Row -->
+        <div class="hero-top-row">
+          <div class="hero-top-tags">
+            <div class="hero-tag-item">/ AI AUTOMATION</div>
+            <div class="hero-tag-item">/ FULL-STACK ARCHITECTURE</div>
+            <div class="hero-tag-item">/ 3D INTERACTIVE ENGINEERING</div>
+          </div>
+          <div class="hero-top-desc">
+            We design automation and bespoke digital architectures that bring clarity, precision, and efficiency to the way your company operates.
+          </div>
+        </div>
+
+        <!-- Center Spacer for Floating Monolith Sculpture -->
+        <div class="hero-center-spacer" aria-hidden="true"></div>
+
+        <!-- Bottom Row -->
+        <div class="hero-bottom-row">
+          
+          <div class="hero-bottom-left">
+            <div class="sanjaya-pill-badge">WE AUTOMATE 100+ BUSINESSES</div>
+            <h1 class="sanjaya-headline">
+              Clear. Precise.<br>
+              <span class="highlight">Automated.</span>
+            </h1>
+          </div>
+
+          <div class="hero-bottom-right">
+            <div class="sanjaya-talk-card">
+              <div class="talk-avatar-wrap">
+                <img src="assets/profile.webp" alt="Sudhanshu Sakhare" class="talk-avatar-img">
+                <span class="talk-avatar-badge" title="Online & Available"></span>
+              </div>
+              <div class="talk-card-details">
+                <div class="talk-card-title">Talk with Sudhanshu</div>
+                <div class="talk-card-role">LEAD ARCHITECT • PUNE, IN</div>
+                <a href="#contact" class="talk-card-action-btn">
+                  <span>Book 15-mins call</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         TRUSTED COMPANIES / CLIENTS GRID (Sanjaya 5x2 Matrix)
+         ========================================================================== -->
+    <section class="sanjaya-brands-section" aria-label="Trusted Companies">
+      <div class="container">
+        <div class="brands-meta-header">TRUSTED COMPANIES ACROSS INDUSTRIES</div>
+        
+        <div class="sanjaya-brands-grid">
+          <div class="brand-grid-cell"><span class="brand-logo-text">BATAVIA</span></div>
+          <div class="brand-grid-cell"><span class="brand-logo-text">Univercell</span></div>
+          <div class="brand-grid-cell"><span class="brand-logo-text">Mandala</span></div>
+          <div class="brand-grid-cell"><span class="brand-logo-text">Lifero</span></div>
+          <div class="brand-grid-cell"><span class="brand-logo-text">Primalfa</span></div>
+          <div class="brand-grid-cell"><span class="brand-logo-text">BLOCKHAUS.</span></div>
+          <div class="brand-grid-cell"><span class="brand-logo-text">VELOX</span></div>
+          <div class="brand-grid-cell"><span class="brand-logo-text">NexaLabs</span></div>
+          <div class="brand-grid-cell"><span class="brand-logo-text">FinVortex</span></div>
+          <div class="brand-grid-cell"><span class="brand-logo-text">Sadewa</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         LENIS EDITORIAL TEXT REVEAL SECTION (lenis.dev Signature Word Illumination)
+         ========================================================================== -->
+    <section class="lenis-reveal-section" id="philosophy" aria-label="Digital Engineering Philosophy">
+      <div class="lenis-reveal-sticky">
+        <div class="container lenis-reveal-inner">
+          <div class="lenis-reveal-top-bar">
+            <div class="sanjaya-pill-badge">/ THE DIGITAL MANIFESTO</div>
+            <div class="lenis-scroll-indicator">
+              <span class="lenis-pulse-dot"></span>
+              <span class="lenis-indicator-text">SCROLL DOWN TO ILLUMINATE WORDS</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </div>
+
+          <div class="lenis-reveal-body">
+            <h2 class="lenis-reveal-text" id="lenis-reveal-target">
+              We believe the next generation of web engineering belongs to those who eliminate friction. Every microsecond of latency, clumsy layout shift, and static interaction dilutes your authority. We engineer buttery-smooth digital architectures, hyper-responsive interfaces, and autonomous AI systems built for unstoppable scale.
+            </h2>
+          </div>
+
+          <div class="lenis-reveal-stats-row">
+            <div class="reveal-stat-item">
+              <div class="reveal-stat-num">120 FPS</div>
+              <div class="reveal-stat-label">Sub-Pixel Fluidity</div>
+            </div>
+            <div class="reveal-stat-item">
+              <div class="reveal-stat-num">0.00 ms</div>
+              <div class="reveal-stat-label">Inertia Lag Tolerance</div>
+            </div>
+            <div class="reveal-stat-item">
+              <div class="reveal-stat-num">100%</div>
+              <div class="reveal-stat-label">Hardware-Accelerated</div>
+            </div>
+            <div class="reveal-stat-item">
+              <div class="reveal-stat-num">&lt; 0.8s</div>
+              <div class="reveal-stat-label">First Contentful Paint</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         THE HIDDEN COST / PROBLEM ORBIT SECTION (Sanjaya Orbit Component)
+         ========================================================================== -->
+    <section class="sanjaya-orbit-section" aria-label="The Hidden Cost of Manual Work">
+      <div class="orbit-system-wrap">
+        
+        <!-- Concentric Rotating Orbit Rings -->
+        <div class="orbit-ring ring-outer" aria-hidden="true"></div>
+        <div class="orbit-ring ring-middle" aria-hidden="true"></div>
+        <div class="orbit-ring ring-inner" aria-hidden="true"></div>
+
+        <!-- Orbit Center Core -->
+        <div class="orbit-center-core">
+          <h2 class="orbit-center-title">
+            The Hidden Cost<br>
+            of Manual Work
+          </h2>
+        </div>
+
+        <!-- Orbit Floating Badges -->
+        <div class="orbit-pill pill-pos-1">Wasted Resources</div>
+        <div class="orbit-pill pill-pos-2">Siloed Communication</div>
+        <div class="orbit-pill pill-pos-3">Tedious Onboarding</div>
+        <div class="orbit-pill pill-pos-4">Fragmented Workflows</div>
+        <div class="orbit-pill pill-pos-5">Lack of Visibility</div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         LENIS HORIZONTAL PINNED SHOWCASE (lenis.dev Signature Horizontal Scroll)
+         ========================================================================== -->
+    <section class="lenis-horizontal-container" id="capabilities" aria-label="System Capabilities Showcase">
+      <div class="lenis-horizontal-sticky">
+        <div class="lenis-horizontal-top">
+          <div class="container horizontal-top-inner">
+            <div class="horizontal-title-wrap">
+              <div class="sanjaya-pill-badge">/ HORIZONTAL CAPABILITIES MATRIX</div>
+              <h2 class="horizontal-heading">Engineered for Frictionless Scale</h2>
+            </div>
+            <div class="horizontal-nav-hint">
+              <span class="hint-dot"></span>
+              <span class="hint-text">SCROLL DOWN TO TRAVERSE HORIZONTALLY</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="lenis-horizontal-track-wrap">
+          <div class="lenis-horizontal-track" id="horizontal-track">
+            
+            <!-- Card 01: Sub-Pixel Inertia -->
+            <div class="h-card-item">
+              <div class="h-card-header">
+                <span class="h-card-index">01 // KINEMATICS</span>
+                <span class="h-card-badge">LENIS ACTIVE</span>
+              </div>
+              <h3 class="h-card-title">Sub-Pixel Inertia & 120 FPS Momentum</h3>
+              <p class="h-card-desc">Zero-stutter viewport kinematics calibrated with normalized delta physics, cubic Bézier easing, and decoupled smooth touch wheel mechanics.</p>
+              <div class="h-card-tags">
+                <span class="h-tag">Lenis v1.1</span>
+                <span class="h-tag">Smooth Wheel</span>
+                <span class="h-tag">Touch Decoupled</span>
+              </div>
+              <div class="h-card-metric-box">
+                <span class="h-metric-val">120 FPS</span>
+                <span class="h-metric-lbl">Framerate Target</span>
+              </div>
+            </div>
+
+            <!-- Card 02: Autonomous AI Systems -->
+            <div class="h-card-item">
+              <div class="h-card-header">
+                <span class="h-card-index">02 // AUTONOMY</span>
+                <span class="h-card-badge">PRODUCTION PROVEN</span>
+              </div>
+              <h3 class="h-card-title">Autonomous AI Pipelines & Zero-Touch Webhooks</h3>
+              <p class="h-card-desc">Fault-tolerant webhook ingestion, async worker queues, automated customer license provisioning, and intelligent CRM synchronization.</p>
+              <div class="h-card-tags">
+                <span class="h-tag">Python Microservices</span>
+                <span class="h-tag">Next.js 14</span>
+                <span class="h-tag">Stripe Webhooks</span>
+              </div>
+              <div class="h-card-metric-box">
+                <span class="h-metric-val">40+ Hrs</span>
+                <span class="h-metric-lbl">Weekly Manual Labor Saved</span>
+              </div>
+            </div>
+
+            <!-- Card 03: Interactive 3D & GLSL Shaders -->
+            <div class="h-card-item">
+              <div class="h-card-header">
+                <span class="h-card-index">03 // DIMENSION</span>
+                <span class="h-card-badge">WebGL 2.0</span>
+              </div>
+              <h3 class="h-card-title">Hardware-Accelerated 3D & Custom Shaders</h3>
+              <p class="h-card-desc">Tactile rotary dial configurators, interactive mesh deformation, and performant GLSL shaders that load instantly without GPU hogging or battery drain.</p>
+              <div class="h-card-tags">
+                <span class="h-tag">Three.js</span>
+                <span class="h-tag">GLSL Shaders</span>
+                <span class="h-tag">Zero Memory Leaks</span>
+              </div>
+              <div class="h-card-metric-box">
+                <span class="h-metric-val">&lt; 15ms</span>
+                <span class="h-metric-lbl">GPU Frame Budget</span>
+              </div>
+            </div>
+
+            <!-- Card 04: Headless High-Conversion Commerce -->
+            <div class="h-card-item">
+              <div class="h-card-header">
+                <span class="h-card-index">04 // COMMERCE</span>
+                <span class="h-card-badge">HIGH VELOCITY</span>
+              </div>
+              <h3 class="h-card-title">Sub-Second Headless Commerce Platforms</h3>
+              <p class="h-card-desc">High-speed checkout funnels, instant device valuation algorithms, dynamic tax calculation, and real-time inventory management.</p>
+              <div class="h-card-tags">
+                <span class="h-tag">Batavia Core</span>
+                <span class="h-tag">Univercell Engine</span>
+                <span class="h-tag">Carrier APIs</span>
+              </div>
+              <div class="h-card-metric-box">
+                <span class="h-metric-val">+42%</span>
+                <span class="h-metric-lbl">Conversion Rate Lift</span>
+              </div>
+            </div>
+
+            <!-- Card 05: Core Web Vitals Mastery -->
+            <div class="h-card-item">
+              <div class="h-card-header">
+                <span class="h-card-index">05 // VELOCITY</span>
+                <span class="h-card-badge">LIGHTHOUSE 99+</span>
+              </div>
+              <h3 class="h-card-title">Obsessive Core Web Vitals & Zero Layout Shift</h3>
+              <p class="h-card-desc">Engineered for sub-second First Contentful Paint, zero Cumulative Layout Shift (CLS 0.00), and hyper-optimized asset delivery.</p>
+              <div class="h-card-tags">
+                <span class="h-tag">CLS 0.00</span>
+                <span class="h-tag">FCP 0.8s</span>
+                <span class="h-tag">Clean Tree-Shaking</span>
+              </div>
+              <div class="h-card-metric-box">
+                <span class="h-metric-val">99 / 100</span>
+                <span class="h-metric-lbl">Performance Score</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Horizontal Scroll Bottom Bar & Progress Track -->
+        <div class="container horizontal-bottom-bar">
+          <div class="horizontal-progress-track">
+            <div class="horizontal-progress-fill" id="horizontal-progress-bar"></div>
+          </div>
+          <div class="horizontal-step-counter">
+            <span id="h-step-current">01</span> / <span>05 ARCHITECTURES</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         LENIS VELOCITY-RESPONSIVE DUAL MARQUEE (lenis.dev Kinetic Ribbons)
+         ========================================================================== -->
+    <div class="lenis-marquee-section" aria-hidden="true">
+      <div class="lenis-marquee-strip strip-forward" id="marquee-strip-1">
+        <div class="marquee-track">
+          <span>CREATIVE ARCHITECTURE</span> <span class="marquee-star">✦</span>
+          <span>AUTONOMOUS WORKFLOWS</span> <span class="marquee-star">✦</span>
+          <span>SUB-PIXEL KINEMATICS</span> <span class="marquee-star">✦</span>
+          <span>HARDWARE-ACCELERATED WEBGL</span> <span class="marquee-star">✦</span>
+          <span>120 FPS GLIDE</span> <span class="marquee-star">✦</span>
+          <span>ZERO LATENCY</span> <span class="marquee-star">✦</span>
+          <span>PUNE, INDIA</span> <span class="marquee-star">✦</span>
+        </div>
+        <div class="marquee-track">
+          <span>CREATIVE ARCHITECTURE</span> <span class="marquee-star">✦</span>
+          <span>AUTONOMOUS WORKFLOWS</span> <span class="marquee-star">✦</span>
+          <span>SUB-PIXEL KINEMATICS</span> <span class="marquee-star">✦</span>
+          <span>HARDWARE-ACCELERATED WEBGL</span> <span class="marquee-star">✦</span>
+          <span>120 FPS GLIDE</span> <span class="marquee-star">✦</span>
+          <span>ZERO LATENCY</span> <span class="marquee-star">✦</span>
+          <span>PUNE, INDIA</span> <span class="marquee-star">✦</span>
+        </div>
+      </div>
+
+      <div class="lenis-marquee-strip strip-reverse" id="marquee-strip-2">
+        <div class="marquee-track">
+          <span>LENIS SMOOTH ENGINE</span> <span class="marquee-star">✦</span>
+          <span>HIGH-VELOCITY E-COMMERCE</span> <span class="marquee-star">✦</span>
+          <span>BESPOKE GLSL RIGS</span> <span class="marquee-star">✦</span>
+          <span>EVENT-DRIVEN BACKENDS</span> <span class="marquee-star">✦</span>
+          <span>OBSESSIVE WEB VITALS</span> <span class="marquee-star">✦</span>
+          <span>SUDHANSHU SAKHARE</span> <span class="marquee-star">✦</span>
+        </div>
+        <div class="marquee-track">
+          <span>LENIS SMOOTH ENGINE</span> <span class="marquee-star">✦</span>
+          <span>HIGH-VELOCITY E-COMMERCE</span> <span class="marquee-star">✦</span>
+          <span>BESPOKE GLSL RIGS</span> <span class="marquee-star">✦</span>
+          <span>EVENT-DRIVEN BACKENDS</span> <span class="marquee-star">✦</span>
+          <span>OBSESSIVE WEB VITALS</span> <span class="marquee-star">✦</span>
+          <span>SUDHANSHU SAKHARE</span> <span class="marquee-star">✦</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         OUR WORKS — STACKING CARDS SECTION (Sanjaya Layout)
+         ========================================================================== -->
+    <section id="projects" class="sanjaya-works-section" aria-label="Our Works">
+      <div class="container">
+        
+        <div class="section-headline-wrap">
+          <div class="section-pill-tag">OUR WORKS</div>
+          <h2 class="section-main-heading">Structured. Automated. Delivered.</h2>
+          <p class="section-subtext">Selected workflow transformations across sales, operations, and internal systems.</p>
+        </div>
+
+        <!-- Stacking Cards Deck -->
+        <div class="sanjaya-stack-deck" id="stacking-deck-container">
+
+          <!-- Card 1: Batavia -->
+          <article class="sanjaya-card" style="--stack-index: 1;" data-project-id="batavia">
+            <div class="sanjaya-card-inner">
+              <div class="card-visual-col">
+                <img src="assets/card-batavia.jpg" alt="Scaling Batavia's Digital Product Store with Automation" class="card-media-img" loading="lazy">
+              </div>
+              <div class="card-content-col">
+                <div>
+                  <div class="card-top-bar">
+                    <span class="card-meta-line">2026 • E-COMMERCE</span>
+                    <span class="card-meta-line" style="color: var(--accent-green);">● ACTIVE</span>
+                  </div>
+                  <div class="card-brand-logo">BATAVIA</div>
+                  <h3 class="card-project-title">Scaling Batavia’s Digital Product Store with Automation</h3>
+                  <p class="card-description">
+                    Helping Batavia automate product delivery and customer workflows so their digital store can handle more sales with less manual work.
+                  </p>
+                  
+                  <div class="card-stats-row">
+                    <div class="stat-pill"><strong>40</strong> hours saved weekly</div>
+                    <div class="stat-pill"><strong>2.4x</strong> more repeat purchases</div>
+                    <div class="stat-pill"><strong>Next.js 14</strong> Architecture</div>
+                  </div>
+                </div>
+
+                <div class="card-action-row">
+                  <button class="btn-card-primary btn-inspect" data-project="batavia">
+                    <span>View Case Study</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  </button>
+                  <a href="#contact" class="btn-card-secondary">
+                    <span>Inquire System ↗</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Mandala -->
+          <article class="sanjaya-card" style="--stack-index: 2;" data-project-id="mandala">
+            <div class="sanjaya-card-inner">
+              <div class="card-visual-col">
+                <img src="assets/card-mandala.jpg" alt="Scaling Mandala's Operations with Automation" class="card-media-img" loading="lazy">
+              </div>
+              <div class="card-content-col">
+                <div>
+                  <div class="card-top-bar">
+                    <span class="card-meta-line">2026 • HARDWARE & SAAS</span>
+                    <span class="card-meta-line" style="color: var(--accent-green);">● AUTOMATED</span>
+                  </div>
+                  <div class="card-brand-logo">Mandala</div>
+                  <h3 class="card-project-title">Scaling Mandala’s E Commerce Operations with Automation</h3>
+                  <p class="card-description">
+                    Helping Mandala automate order processing and customer workflows to handle more sales without increasing operational workload.
+                  </p>
+                  
+                  <div class="card-stats-row">
+                    <div class="stat-pill"><strong>3.2x</strong> faster order processing</div>
+                    <div class="stat-pill"><strong>FASTER</strong> NOTIFICATIONS</div>
+                    <div class="stat-pill"><strong>Zero</strong> manual bottlenecks</div>
+                  </div>
+                </div>
+
+                <div class="card-action-row">
+                  <button class="btn-card-primary btn-inspect" data-project="mandala">
+                    <span>View Case Study</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  </button>
+                  <a href="#contact" class="btn-card-secondary">
+                    <span>Inquire System ↗</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Univercell Canada -->
+          <article class="sanjaya-card" style="--stack-index: 3;" data-project-id="univercell">
+            <div class="sanjaya-card-inner">
+              <div class="card-visual-col">
+                <img src="assets/univercell.png" alt="Univercell Canada E-Commerce Platform" class="card-media-img" loading="lazy">
+              </div>
+              <div class="card-content-col">
+                <div>
+                  <div class="card-top-bar">
+                    <span class="card-meta-line">2025 • TELECOM & TRADE-IN</span>
+                    <span class="card-meta-line" style="color: var(--accent-green);">● LIVE CLIENT</span>
+                  </div>
+                  <div class="card-brand-logo">Univercell Canada</div>
+                  <h3 class="card-project-title">Scaling Univercell’s Device Marketplace & Valuation Engine</h3>
+                  <p class="card-description">
+                    Architected a high-conversion trade-in engine with real-time automated valuation, multi-tier checkout, and seamless inventory synchronization across Canada.
+                  </p>
+                  
+                  <div class="card-stats-row">
+                    <div class="stat-pill"><strong>+42%</strong> inquiry lift</div>
+                    <div class="stat-pill"><strong>0.85s</strong> Core Web Vitals</div>
+                    <div class="stat-pill"><strong>Ontario, CA</strong> Market</div>
+                  </div>
+                </div>
+
+                <div class="card-action-row">
+                  <button class="btn-card-primary btn-inspect" data-project="univercell">
+                    <span>View Case Study</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  </button>
+                  <a href="https://univercellcanada.com/" target="_blank" rel="noopener noreferrer" class="btn-card-secondary">
+                    <span>Visit Live ↗</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Lifero Clinics -->
+          <article class="sanjaya-card" style="--stack-index: 4;" data-project-id="lifero">
+            <div class="sanjaya-card-inner">
+              <div class="card-visual-col">
+                <img src="assets/lifero.png" alt="Lifero Clinics Healthcare System" class="card-media-img" loading="lazy">
+              </div>
+              <div class="card-content-col">
+                <div>
+                  <div class="card-top-bar">
+                    <span class="card-meta-line">2025 • HEALTHCARE & SAAS</span>
+                    <span class="card-meta-line" style="color: var(--accent-green);">● CLINICAL</span>
+                  </div>
+                  <div class="card-brand-logo">Lifero Clinics</div>
+                  <h3 class="card-project-title">Digitizing Patient Journeys & Automated Telehealth Workflows</h3>
+                  <p class="card-description">
+                    Engineered an end-to-end clinical management portal with HIPAA-compliant data pipelines, instant appointment slotting, and direct consultation booking.
+                  </p>
+                  
+                  <div class="card-stats-row">
+                    <div class="stat-pill"><strong>+180%</strong> patient bookings</div>
+                    <div class="stat-pill"><strong>98/100</strong> Lighthouse score</div>
+                    <div class="stat-pill"><strong>Pune, IN</strong> Medical</div>
+                  </div>
+                </div>
+
+                <div class="card-action-row">
+                  <button class="btn-card-primary btn-inspect" data-project="lifero">
+                    <span>View Case Study</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  </button>
+                  <a href="https://liferoclinics.com/hair-treatment/" target="_blank" rel="noopener noreferrer" class="btn-card-secondary">
+                    <span>Visit Live ↗</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5: Primalfa Retail -->
+          <article class="sanjaya-card" style="--stack-index: 5;" data-project-id="primalfa">
+            <div class="sanjaya-card-inner">
+              <div class="card-visual-col">
+                <img src="assets/primalfa.png" alt="Primalfa Commercial E-Commerce" class="card-media-img" loading="lazy">
+              </div>
+              <div class="card-content-col">
+                <div>
+                  <div class="card-top-bar">
+                    <span class="card-meta-line">2024 • RETAIL & COMMERCE</span>
+                    <span class="card-meta-line" style="color: var(--accent-green);">● E-COMMERCE</span>
+                  </div>
+                  <div class="card-brand-logo">Primalfa Retail</div>
+                  <h3 class="card-project-title">Scaling Pandawa’s Retail Operations with Modern Commerce</h3>
+                  <p class="card-description">
+                    Complete commercial storefront engineered with bespoke catalog navigation, streamlined 3-step checkout, and seamless inventory synchronization.
+                  </p>
+                  
+                  <div class="card-stats-row">
+                    <div class="stat-pill"><strong>3-Step</strong> checkout speed</div>
+                    <div class="stat-pill"><strong>99.98%</strong> platform uptime</div>
+                    <div class="stat-pill"><strong>Full-Stack</strong> delivery</div>
+                  </div>
+                </div>
+
+                <div class="card-action-row">
+                  <button class="btn-card-primary btn-inspect" data-project="primalfa">
+                    <span>View Case Study</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  </button>
+                  <a href="https://primalfa.com/" target="_blank" rel="noopener noreferrer" class="btn-card-secondary">
+                    <span>Visit Live ↗</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         HOW IT WORKS — 3-STEP PROCESS SECTION (Sanjaya Layout)
+         ========================================================================== -->
+    <section id="how-it-works" class="sanjaya-process-section" aria-label="How It Works">
+      <div class="container">
+        
+        <div class="section-headline-wrap">
+          <div class="section-pill-tag">HOW IT WORKS</div>
+          <h2 class="section-main-heading">A simple, structured approach to automation</h2>
+          <p class="section-subtext">We design automation that removes friction, sharpens workflows, and helps your team operate with clarity and control.</p>
+        </div>
+
+        <div class="process-cards-grid">
+          
+          <div class="process-card">
+            <div>
+              <div class="process-step-num">/ 01 UNDERSTAND</div>
+              <h3 class="process-title">1. Understand Your Workflow</h3>
+              <p class="process-desc">
+                We analyze your workflow, tools, and operational bottlenecks to build the optimal engineering roadmap.
+              </p>
+            </div>
+          </div>
+
+          <div class="process-card">
+            <div>
+              <div class="process-step-num">/ 02 IMPLEMENT</div>
+              <h3 class="process-title">2. Implement Tailored Systems</h3>
+              <p class="process-desc">
+                We implement automation, high-performance web applications, and integrations tailored specifically to your business goals.
+              </p>
+            </div>
+          </div>
+
+          <div class="process-card">
+            <div>
+              <div class="process-step-num">/ 03 SCALE</div>
+              <h3 class="process-title">3. Refine, Improve & Scale</h3>
+              <p class="process-desc">
+                We refine, improve, and scale as your operations grow, ensuring 99.9% uptime, zero friction, and maximum efficiency.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SERVICES SECTION (Sanjaya 2-Column Sticky Layout)
+         ========================================================================== -->
+    <section id="services" class="sanjaya-services-section" aria-label="Services">
+      <div class="container">
+        
+        <div class="services-layout-grid">
+          
+          <!-- Sticky Sidebar -->
+          <div class="services-sticky-sidebar">
+            <div class="section-pill-tag">SERVICES</div>
+            <h2 class="section-main-heading" style="text-align: left; font-size: clamp(32px, 3.8vw, 44px);">Built to Simplify Operations</h2>
+            <p class="section-subtext" style="text-align: left;">
+              We design intelligent systems that streamline workflows, strengthen revenue processes, and connect your tools into one cohesive ecosystem.
+            </p>
+          </div>
+
+          <!-- Services Cards Column -->
+          <div class="services-cards-col">
+            
+            <!-- Service 1 -->
+            <div class="service-card">
+              <div class="service-num">/ 01</div>
+              <h3 class="service-title">Workflow Automation</h3>
+              <p class="service-summary">Structured systems that eliminate repetitive work.</p>
+              
+              <div class="service-features-list">
+                <div class="service-feature-row">
+                  <span>Workflow Audits & Diagnostics</span>
+                  <span class="bullet">✦</span>
+                </div>
+                <div class="service-feature-row">
+                  <span>Cross-Platform Tool Integration</span>
+                  <span class="bullet">✦</span>
+                </div>
+                <div class="service-feature-row">
+                  <span>Build Scalable Internal Systems</span>
+                  <span class="bullet">✦</span>
+                </div>
+                <div class="service-feature-row">
+                  <span>Internal Operations Automation</span>
+                  <span class="bullet">✦</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-card">
+              <div class="service-num">/ 02</div>
+              <h3 class="service-title">AI-Powered Systems</h3>
+              <p class="service-summary">Intelligence embedded into your digital operations.</p>
+              
+              <div class="service-features-list">
+                <div class="service-feature-row">
+                  <span>AI Lead Qualification Systems</span>
+                  <span class="bullet">✦</span>
+                </div>
+                <div class="service-feature-row">
+                  <span>Custom GPT Internal Assistants</span>
+                  <span class="bullet">✦</span>
+                </div>
+                <div class="service-feature-row">
+                  <span>AI Data Processing & Enrichment</span>
+                  <span class="bullet">✦</span>
+                </div>
+                <div class="service-feature-row">
+                  <span>Smart Routing & Decision Logic</span>
+                  <span class="bullet">✦</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-card">
+              <div class="service-num">/ 03</div>
+              <h3 class="service-title">Revenue & Digital Platforms</h3>
+              <p class="service-summary">Predictable, scalable revenue infrastructure.</p>
+              
+              <div class="service-features-list">
+                <div class="service-feature-row">
+                  <span>CRM Pipeline & Sales Automation</span>
+                  <span class="bullet">✦</span>
+                </div>
+                <div class="service-feature-row">
+                  <span>High-Throughput E-Commerce Engines</span>
+                  <span class="bullet">✦</span>
+                </div>
+                <div class="service-feature-row">
+                  <span>Sub-Second Page Load Optimization</span>
+                  <span class="bullet">✦</span>
+                </div>
+                <div class="service-feature-row">
+                  <span>Interactive 3D WebGL Showcases</span>
+                  <span class="bullet">✦</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INTEGRATION / TECH STACK GRID
+         ========================================================================== -->
+    <section id="integration" class="sanjaya-tech-section" aria-label="Integration">
+      <div class="container">
+        
+        <div class="section-headline-wrap">
+          <div class="section-pill-tag">INTEGRATION</div>
+          <h2 class="section-main-heading">Tools Working As One Unified Workflow</h2>
+          <p class="section-subtext">Your CRM, marketing, e-commerce, and operations tools working as one unified ecosystem.</p>
+        </div>
+
+        <div class="tech-grid">
+          <div class="tech-card">
+            <div class="tech-card-header">
+              <span class="tech-name">Next.js 14/15</span>
+              <span class="tech-category">Framework</span>
+            </div>
+            <p class="tech-desc">Server actions, dynamic routing, App Router & edge computing.</p>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-card-header">
+              <span class="tech-name">React 18/19</span>
+              <span class="tech-category">Frontend</span>
+            </div>
+            <p class="tech-desc">Reactive components, optimistic updates, and clean state machines.</p>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-card-header">
+              <span class="tech-name">TypeScript</span>
+              <span class="tech-category">Language</span>
+            </div>
+            <p class="tech-desc">End-to-end type safety, reliable refactoring, zero runtime crashes.</p>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-card-header">
+              <span class="tech-name">Three.js / WebGL</span>
+              <span class="tech-category">3D & Creative</span>
+            </div>
+            <p class="tech-desc">Hardware-accelerated 3D shaders, real-time lighting, 60 FPS.</p>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-card-header">
+              <span class="tech-name">Node.js & Python</span>
+              <span class="tech-category">Backend</span>
+            </div>
+            <p class="tech-desc">Scalable microservices, automated pipelines, REST & GraphQL.</p>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-card-header">
+              <span class="tech-name">Supabase / Postgres</span>
+              <span class="tech-category">Database</span>
+            </div>
+            <p class="tech-desc">Real-time subscriptions, Row-Level Security, vector embeddings.</p>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-card-header">
+              <span class="tech-name">TailwindCSS</span>
+              <span class="tech-category">Styling</span>
+            </div>
+            <p class="tech-desc">Systematic design tokens, fluid layouts, ultra-clean codebases.</p>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-card-header">
+              <span class="tech-name">Docker & AWS</span>
+              <span class="tech-category">DevOps</span>
+            </div>
+            <p class="tech-desc">Containerized deployments, automated CI/CD, 99.98% uptime.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ABOUT & LEAD ARCHITECT CARD
+         ========================================================================== -->
+    <section id="about" class="sanjaya-about-section" aria-label="About Sudhanshu">
+      <div class="container">
+        
+        <div class="about-card-wrap">
+          <div class="about-avatar-col">
+            <img src="assets/profile.webp" alt="Sudhanshu Sakhare" class="about-avatar-img">
+          </div>
+          <div class="about-content-col">
+            <div>
+              <div class="section-pill-tag" style="margin-bottom: 14px;">LEAD ARCHITECT</div>
+              <h2 class="about-title">Sudhanshu Sakhare</h2>
+              <p class="about-bio">
+                Creative Full-Stack Architect and Engineer based in Pune, India. I partner with ambitious founders, telecommunications brands, healthcare institutions, and fast-growing businesses to engineer high-impact digital experiences, bespoke e-commerce engines, and automated operational pipelines.
+              </p>
+              <p class="about-bio" style="margin-bottom: 0;">
+                Obsessed with surgical typography, sub-second latency, and intuitive interfaces that turn visitors into long-term loyal clients.
+              </p>
+            </div>
+
+            <div class="about-metrics-row">
+              <div>
+                <div class="about-metric-val">4<span>+</span></div>
+                <div class="about-metric-label">Years Experience</div>
+              </div>
+              <div>
+                <div class="about-metric-val">25<span>+</span></div>
+                <div class="about-metric-label">Shipped Systems</div>
+              </div>
+              <div>
+                <div class="about-metric-val">100<span>%</span></div>
+                <div class="about-metric-label">Client Trust</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FAQ ACCORDION COMPONENT (Sanjaya Layout)
+         ========================================================================== -->
+    <section id="faq" class="sanjaya-faq-section" aria-label="Frequently Asked Questions">
+      <div class="container">
+        
+        <div class="section-headline-wrap">
+          <div class="section-pill-tag">FAQ</div>
+          <h2 class="section-main-heading">Frequently Asked Questions</h2>
+          <p class="section-subtext">Clear answers about engagements, timelines, and technical deliverables.</p>
+        </div>
+
+        <div class="faq-accordion-wrap">
+          
+          <div class="faq-item active">
+            <button class="faq-trigger" aria-expanded="true">
+              <span>How long does an end-to-end web platform or automation project typically take?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-body">
+              <p class="faq-content">
+                Most projects range from 2 to 5 weeks depending on scope. Fast-track automated integrations can be deployed in as little as 7-10 days, while comprehensive e-commerce architectures and custom platforms are typically launched within 3 to 4 weeks with full QA and lighthouse optimization.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Can you integrate with existing tools like CRMs, databases, and custom APIs?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-body">
+              <p class="faq-content">
+                Yes, absolutely. We specialize in cross-platform integrations connecting your frontend directly with custom REST/GraphQL APIs, HubSpot, Salesforce, Supabase, Stripe, Shopify, and custom internal microservices.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Do you work with international clients across different time zones?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-body">
+              <p class="faq-content">
+                Yes. While based in Pune, India, the majority of our clients are located across North America, the United Kingdom, and Southeast Asia. We maintain flexible working overlaps, daily async updates, and scheduled video checkpoints.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>How do you guarantee high performance, security, and SEO?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-body">
+              <p class="faq-content">
+                Every platform we build undergoes rigorous audits: 95+ Core Web Vitals, server-side pre-rendering, modern image compression, secure HTTPS/CORS headers, schema markup, and responsive stress testing across all device viewports.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CALL TO ACTION & FOOTER (Sanjaya Layout)
+         ========================================================================== -->
+    <section id="contact" class="sanjaya-cta-section" aria-label="Let's Get Started">
+      <div class="cta-overlay" aria-hidden="true"></div>
+      
+      <div class="container cta-container">
+        <div class="section-pill-tag">LET'S GET STARTED</div>
+        <h2 class="cta-title">Ready to Refine Your Workflow?</h2>
+        <p class="cta-desc">
+          Share your current process. We'll help you identify what can be automated and where efficiency can be improved.
+        </p>
+
+        <a href="mailto:contact@sudhanshuportfolio.in" class="btn-consultation" style="font-size: 15px; height: 48px; padding: 0 28px;">
+          Get Free Consultation
+        </a>
+      </div>
+    </section>
+
+    <!-- Sub-Footer -->
+    <footer class="sanjaya-footer">
+      <div class="container">
+        
+        <div class="footer-top-row">
+          
+          <div class="footer-brand-col">
+            <a href="#home" class="logo-link">
+              <div class="logo-symbol" aria-hidden="true"></div>
+              <span class="logo-title">sudhanshu</span>
+            </a>
+            <div class="footer-tagline">
+              Clear. Precise.<br>Automated.
+            </div>
+          </div>
+
+          <div class="footer-links-col">
+            <span class="footer-col-title">NAVIGATION</span>
+            <a href="#home" class="footer-nav-link">Home</a>
+            <a href="#projects" class="footer-nav-link">Projects</a>
+            <a href="#how-it-works" class="footer-nav-link">How It Works</a>
+            <a href="#services" class="footer-nav-link">Services</a>
+            <a href="#about" class="footer-nav-link">About</a>
+            <a href="#faq" class="footer-nav-link">FAQ</a>
+            <a href="#contact" class="footer-nav-link">Contact</a>
+          </div>
+
+          <div class="footer-links-col">
+            <span class="footer-col-title">SOCIALS</span>
+            <a href="http://www.linkedin.com/in/sudhanshu-sakhare-211442249" target="_blank" rel="noopener noreferrer" class="footer-nav-link">LinkedIn ↗</a>
+            <a href="https://github.com/sudhanshu-sakhare" target="_blank" rel="noopener noreferrer" class="footer-nav-link">GitHub ↗</a>
+            <a href="https://www.instagram.com/sudhanshu5367/" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Instagram ↗</a>
+            <a href="https://wa.me/qr/VIO63XZTISFCD1" target="_blank" rel="noopener noreferrer" class="footer-nav-link">WhatsApp ↗</a>
+          </div>
+
+          <div class="footer-contact-col">
+            <span class="footer-col-title">DIRECT INQUIRIES</span>
+            <a href="mailto:contact@sudhanshuportfolio.in" class="footer-email-link">contact@sudhanshuportfolio.in</a>
+            <div class="footer-location" id="pune-time-display">Pune, Maharashtra, India</div>
+          </div>
+
+        </div>
+
+        <div class="footer-bottom-row">
+          <div>© 2026 Sudhanshu Sakhare. All Rights Reserved.</div>
+          <div>Crafted with Surgical Precision • Geist Typography</div>
+        </div>
+
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- ==========================================================================
+       CASE STUDY DETAIL MODAL
+       ========================================================================== -->
+  <div class="modal-overlay" id="case-study-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-window">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close Modal">&times;</button>
+      
+      <div id="modal-client" class="modal-client">CLIENT CATEGORY</div>
+      <h2 id="modal-title" class="modal-title">Project Title</h2>
+
+      <div class="modal-img-wrap">
+        <img id="modal-img" src="" alt="Case Study Screenshot">
+      </div>
+
+      <div id="modal-specs" class="modal-specs-grid">
+        <!-- Dynamic metrics populated by JS -->
+      </div>
+
+      <div class="modal-body-section">
+        <h4 class="modal-section-h">OVERVIEW</h4>
+        <p id="modal-overview" class="modal-p"></p>
+      </div>
+
+      <div class="modal-body-section">
+        <h4 class="modal-section-h">THE CHALLENGE</h4>
+        <p id="modal-challenge" class="modal-p"></p>
+      </div>
+
+      <div class="modal-body-section">
+        <h4 class="modal-section-h">THE SOLUTION & ENGINEERING</h4>
+        <p id="modal-solution" class="modal-p"></p>
+      </div>
+
+      <div style="margin-top: 28px; display: flex; gap: 14px;">
+        <a id="modal-live-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn-consultation">
+          <span>Launch Live Platform</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       LENIS REAL-TIME TELEMETRY HUD (Floating Status Capsule)
+       ========================================================================== -->
+  <div class="lenis-hud-pill" id="lenis-hud" aria-hidden="true">
+    <div class="hud-indicator-dot"></div>
+    <span class="hud-status">LENIS 1.1</span>
+    <span class="hud-sep">•</span>
+    <span class="hud-fps" id="hud-fps-val">120 FPS</span>
+    <span class="hud-sep">•</span>
+    <span class="hud-metric" id="hud-velocity-val">0.0 px/s</span>
+    <span class="hud-sep">•</span>
+    <span class="hud-metric" id="hud-scroll-val">0%</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/lenis.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
