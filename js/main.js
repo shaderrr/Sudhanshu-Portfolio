@@ -214,6 +214,7 @@ if (typeof window !== 'undefined') {
       updateHorizontalScroll();
       handleCardStacking();
       updateScrollProgress();
+      updatePainPointAnimation();
     });
   } else {
     window.addEventListener('scroll', () => {
@@ -222,7 +223,103 @@ if (typeof window !== 'undefined') {
       updateHorizontalScroll();
       handleCardStacking();
       updateScrollProgress();
+      updatePainPointAnimation();
     }, { passive: true });
+  }
+
+  /* ==========================================================================
+     Sanjaya Pain Point Pinned Section & Sequential Pills Entrance Animation
+     ========================================================================== */
+  const painSection = document.getElementById('pain-points');
+  const painCenterCore = document.getElementById('pain-center-core');
+  const painPills = [
+    {
+      el: document.getElementById('pain-pill-5'), // Wasted Resources (Stage 1)
+      initX: -62,
+      initY: 10,
+      startProgress: 0.14,
+      endProgress: 0.30
+    },
+    {
+      el: document.getElementById('pain-pill-4'), // Siloed Communication (Stage 2)
+      initX: 54,
+      initY: -9,
+      startProgress: 0.28,
+      endProgress: 0.44
+    },
+    {
+      el: document.getElementById('pain-pill-1'), // Lack of Visibility (Stage 3)
+      initX: 0,
+      initY: 18,
+      startProgress: 0.44,
+      endProgress: 0.60
+    },
+    {
+      el: document.getElementById('pain-pill-2'), // Tedious Onboarding (Stage 4)
+      initX: 49,
+      initY: 10,
+      startProgress: 0.60,
+      endProgress: 0.76
+    },
+    {
+      el: document.getElementById('pain-pill-3'), // Fragmented Workflows (Stage 5)
+      initX: -62,
+      initY: -10,
+      startProgress: 0.76,
+      endProgress: 0.92
+    }
+  ];
+
+  // Snappy overshoot spring ease matching Framer motion curve
+  function easeOutBackSpring(x) {
+    const c1 = 1.70158;
+    const c3 = c1 + 1;
+    return 1 + c3 * Math.pow(x - 1, 3) + c1 * Math.pow(x - 1, 2);
+  }
+
+  function updatePainPointAnimation() {
+    if (!painSection) return;
+
+    const rect = painSection.getBoundingClientRect();
+    const sectionHeight = painSection.offsetHeight;
+    const windowHeight = window.innerHeight;
+
+    const scrollDist = -rect.top;
+    const maxScroll = sectionHeight - windowHeight;
+    const progress = Math.max(0, Math.min(1, scrollDist / (maxScroll || 1)));
+
+    // Central Title Core Reveal
+    if (painCenterCore) {
+      const coreOpacity = Math.max(0.15, Math.min(1, 0.15 + progress * 2.8));
+      const coreScale = 0.92 + Math.min(0.08, progress * 0.16);
+      painCenterCore.style.opacity = coreOpacity.toFixed(3);
+      painCenterCore.style.transform = `scale(${coreScale.toFixed(3)})`;
+    }
+
+    // Process each floating pain point pill (Pure scroll entrance, zero hover/drift)
+    painPills.forEach((pill) => {
+      if (!pill.el) return;
+
+      if (progress < pill.startProgress) {
+        pill.el.style.opacity = '0';
+        pill.el.style.transform = `translate(calc(-50% + ${pill.initX}px), calc(-50% + ${pill.initY}px)) scale(0.5)`;
+      } else if (progress >= pill.endProgress) {
+        pill.el.style.opacity = '1';
+        pill.el.style.transform = `translate(-50%, -50%) scale(1)`;
+      } else {
+        const localProgress = Math.min(1, (progress - pill.startProgress) / (pill.endProgress - pill.startProgress));
+        const eased = Math.min(1.05, easeOutBackSpring(localProgress));
+
+        const currentScale = 0.5 + 0.5 * eased;
+        const currentOpacity = Math.min(1, localProgress * 2.4);
+
+        const curX = pill.initX * (1 - Math.min(1, eased));
+        const curY = pill.initY * (1 - Math.min(1, eased));
+
+        pill.el.style.opacity = currentOpacity.toFixed(3);
+        pill.el.style.transform = `translate(calc(-50% + ${curX.toFixed(1)}px), calc(-50% + ${curY.toFixed(1)}px)) scale(${currentScale.toFixed(3)})`;
+      }
+    });
   }
 
   // Continuous Telemetry Loop
@@ -274,6 +371,7 @@ if (typeof window !== 'undefined') {
   updateHorizontalScroll();
   handleCardStacking();
   updateScrollProgress();
+  updatePainPointAnimation();
 
   /* ==========================================================================
      7. Real-Time Pune, India Clock (IST / UTC+5:30)
@@ -538,5 +636,98 @@ if (typeof window !== 'undefined') {
   window.addEventListener('resize', () => {
     updateHorizontalScroll();
   }, { passive: true });
+
+  /* ==========================================================================
+     11. Sanjaya Framer Viewport Scroll Reveal & Fade-In Engine
+     ========================================================================== */
+  function initScrollReveal() {
+    // Group-based stagger configurations (cascading entry)
+    const staggerGroups = [
+      { container: '.hero-top-tags', selector: '.hero-tag-item', baseDelay: 1 },
+      { container: '.sanjaya-brands-grid', selector: '.brand-grid-cell', baseDelay: 1 },
+      { container: '.lenis-reveal-stats-row', selector: '.reveal-stat-item', baseDelay: 1 },
+      { container: '.process-cards-grid', selector: '.process-card', baseDelay: 1 },
+      { container: '.services-cards-col', selector: '.service-card', baseDelay: 1 },
+      { container: '.tech-grid', selector: '.tech-card', baseDelay: 1 },
+      { container: '.faq-accordion-wrap', selector: '.faq-item', baseDelay: 1 },
+      { container: '.section-headline-wrap', selector: ':scope > *', baseDelay: 1 },
+      { container: '.cta-container', selector: ':scope > *', baseDelay: 1 },
+      { container: '.services-sticky-sidebar', selector: ':scope > *', baseDelay: 1 }
+    ];
+
+    staggerGroups.forEach(group => {
+      document.querySelectorAll(group.container).forEach(parent => {
+        const items = parent.querySelectorAll(group.selector);
+        items.forEach((item, idx) => {
+          if (!item.closest('#pain-points')) {
+            item.classList.add('s-reveal');
+            item.dataset.revealDelay = Math.min(10, (idx % 6) + 1);
+          }
+        });
+      });
+    });
+
+    // Standalone structural targets (headings, media cards, badges)
+    const standaloneTargets = [
+      { selector: '.hero-top-desc', type: 's-reveal' },
+      { selector: '.hero-bottom-left', type: 's-reveal' },
+      { selector: '.hero-bottom-right', type: 's-reveal-scale' },
+      { selector: '.brands-meta-header', type: 's-reveal' },
+      { selector: '.lenis-reveal-top-bar', type: 's-reveal' },
+      { selector: '.horizontal-title-wrap', type: 's-reveal' },
+      { selector: '.horizontal-nav-hint', type: 's-reveal' },
+      { selector: '.sanjaya-card-inner', type: 's-reveal-scale' },
+      { selector: '.about-card-wrap', type: 's-reveal-scale' },
+      { selector: '.footer-top-row', type: 's-reveal' }
+    ];
+
+    standaloneTargets.forEach(target => {
+      document.querySelectorAll(target.selector).forEach(el => {
+        if (!el.closest('#pain-points') && !el.classList.contains('s-reveal') && !el.classList.contains('s-reveal-scale')) {
+          el.classList.add(target.type);
+        }
+      });
+    });
+
+    const allRevealElements = document.querySelectorAll('.s-reveal, .s-reveal-scale, .s-reveal-fade');
+
+    if (!('IntersectionObserver' in window)) {
+      // Fallback for environments without IntersectionObserver
+      allRevealElements.forEach(el => el.classList.add('in-view'));
+      return;
+    }
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '0px 0px -8% 0px', // Triggers smoothly right as element enters view
+      threshold: 0.05
+    });
+
+    allRevealElements.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      const inInitialView = rect.top < window.innerHeight && rect.bottom > 0;
+
+      if (inInitialView && el.closest('.sanjaya-hero-section')) {
+        // Hero elements animate in sequentially on page load
+        setTimeout(() => {
+          el.classList.add('in-view');
+        }, 140);
+      } else if (inInitialView && rect.bottom < window.innerHeight * 0.75) {
+        el.classList.add('in-view');
+      } else {
+        revealObserver.observe(el);
+      }
+    });
+  }
+
+  // Initialize Scroll Reveal Engine
+  initScrollReveal();
 
 })();

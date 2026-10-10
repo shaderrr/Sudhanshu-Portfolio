@@ -25,8 +25,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
-  <script type="module" crossorigin src="/assets/index-Dpg_72fx.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-8hGhb2vT.css">
+  <script type="module" crossorigin src="/assets/index-Co7X7z15.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-B2b97tZr.css">
 </head>
 <body>
 
@@ -222,30 +222,53 @@
     </section>
 
     <!-- ==========================================================================
-         THE HIDDEN COST / PROBLEM ORBIT SECTION (Sanjaya Orbit Component)
+         THE HIDDEN COST OF MANUAL WORK (Sanjaya Signature Pinned Pain Point Animation)
          ========================================================================== -->
-    <section class="sanjaya-orbit-section" aria-label="The Hidden Cost of Manual Work">
-      <div class="orbit-system-wrap">
+    <section class="sanjaya-pain-point-section" id="pain-points" aria-label="The Hidden Cost of Manual Work">
+      <!-- Pinned 100vh Viewport Container -->
+      <div class="pain-point-sticky" id="pain-sticky">
         
-        <!-- Concentric Rotating Orbit Rings -->
-        <div class="orbit-ring ring-outer" aria-hidden="true"></div>
-        <div class="orbit-ring ring-middle" aria-hidden="true"></div>
-        <div class="orbit-ring ring-inner" aria-hidden="true"></div>
-
-        <!-- Orbit Center Core -->
-        <div class="orbit-center-core">
-          <h2 class="orbit-center-title">
-            The Hidden Cost<br>
-            of Manual Work
+        <!-- Center Heading (The Core) -->
+        <div class="pain-point-center" id="pain-center-core">
+          <h2 class="pain-point-title">
+            The Hidden Cost<br>of Manual Work
           </h2>
         </div>
 
-        <!-- Orbit Floating Badges -->
-        <div class="orbit-pill pill-pos-1">Wasted Resources</div>
-        <div class="orbit-pill pill-pos-2">Siloed Communication</div>
-        <div class="orbit-pill pill-pos-3">Tedious Onboarding</div>
-        <div class="orbit-pill pill-pos-4">Fragmented Workflows</div>
-        <div class="orbit-pill pill-pos-5">Lack of Visibility</div>
+        <!-- Floating Pain Point Interactive Pills -->
+        <div class="pain-point-badges-container" id="pain-badges-wrap">
+          
+          <!-- Pill 1: Lack of Visibility (Top Center) -->
+          <div class="pain-pill-item pill-item-1" id="pain-pill-1" data-step="3" data-init-x="0" data-init-y="18">
+            <span class="pill-status-dot"></span>
+            <span class="pill-label">Lack of Visibility</span>
+          </div>
+
+          <!-- Pill 2: Tedious Onboarding (Top Left) -->
+          <div class="pain-pill-item pill-item-2" id="pain-pill-2" data-step="4" data-init-x="49" data-init-y="10">
+            <span class="pill-status-dot"></span>
+            <span class="pill-label">Tedious Onboarding</span>
+          </div>
+
+          <!-- Pill 3: Fragmented Workflows (Bottom Right) -->
+          <div class="pain-pill-item pill-item-3" id="pain-pill-3" data-step="5" data-init-x="-62" data-init-y="-10">
+            <span class="pill-status-dot"></span>
+            <span class="pill-label">Fragmented Workflows</span>
+          </div>
+
+          <!-- Pill 4: Siloed Communication (Bottom Left) -->
+          <div class="pain-pill-item pill-item-4" id="pain-pill-4" data-step="2" data-init-x="54" data-init-y="-9">
+            <span class="pill-status-dot"></span>
+            <span class="pill-label">Siloed Communication</span>
+          </div>
+
+          <!-- Pill 5: Wasted Resources (Top Right) -->
+          <div class="pain-pill-item pill-item-5" id="pain-pill-5" data-step="1" data-init-x="-62" data-init-y="10">
+            <span class="pill-status-dot"></span>
+            <span class="pill-label">Wasted Resources</span>
+          </div>
+
+        </div>
 
       </div>
     </section>

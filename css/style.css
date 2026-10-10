@@ -709,124 +709,114 @@ ul, ol {
    THE HIDDEN COST / PROBLEM ORBIT SECTION (Sanjaya Orbit Component)
    ========================================================================== */
 
-.sanjaya-orbit-section {
+.sanjaya-pain-point-section {
   position: relative;
-  padding: 140px 0;
-  background: radial-gradient(circle at center, #09090e 0%, #010004 70%);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 600px;
+  width: 100%;
+  height: 165vh; /* Fast, snappy scroll runway so boxes move briskly */
+  background-color: var(--bg-primary);
   border-bottom: 1px solid var(--border-subtle);
+  overflow: visible;
 }
 
-.orbit-system-wrap {
-  position: relative;
-  width: 580px;
-  height: 580px;
+.pain-point-sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  padding: 0 20px;
+  z-index: 1;
+  -webkit-mask: linear-gradient(to bottom, transparent 0%, #000000 12% 88%, transparent 100%);
+  mask: linear-gradient(to bottom, transparent 0%, #000000 12% 88%, transparent 100%);
 }
 
-/* Concentric Orbit Rings */
-.orbit-ring {
-  position: absolute;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  pointer-events: none;
-}
-
-.ring-outer {
-  width: 540px;
-  height: 540px;
-  animation: orbitRotate 45s linear infinite;
-}
-
-.ring-middle {
-  width: 390px;
-  height: 390px;
-  animation: orbitRotateReverse 32s linear infinite;
-}
-
-.ring-inner {
-  width: 250px;
-  height: 250px;
-}
-
-@keyframes orbitRotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-@keyframes orbitRotateReverse {
-  from { transform: rotate(360deg); }
-  to { transform: rotate(0deg); }
-}
-
-/* Orbit Center Core */
-.orbit-center-core {
+/* Center Heading */
+.pain-point-center {
   position: relative;
   z-index: 2;
   text-align: center;
-  max-width: 320px;
+  max-width: 460px;
+  padding: 0 16px;
+  will-change: transform, opacity;
 }
 
-.orbit-center-title {
+.pain-point-title {
   font-family: var(--font-main);
-  font-size: 34px;
+  font-size: clamp(34px, 4.4vw, 48px);
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.12;
   letter-spacing: -0.04em;
   color: #ffffff;
+  text-align: center;
+  text-wrap: balance;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
 }
 
-/* Orbit Floating Pills */
-.orbit-pill {
+/* Floating Pain Point Badges (No Hover Animation, Exact Sanjaya Style) */
+.pain-point-badges-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.pain-pill-item {
   position: absolute;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  border-radius: var(--radius-full);
-  background: rgba(26, 26, 29, 0.85);
-  border: 1px solid var(--border-medium);
-  backdrop-filter: blur(12px);
-  font-family: var(--font-main);
-  font-size: 13px;
-  font-weight: 500;
-  color: #dedede;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
-  transition: transform var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+  gap: 12px;
+  padding: 12px 18px;
+  background-color: rgb(26, 26, 29);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  user-select: none;
   cursor: default;
+  will-change: transform, opacity;
 }
 
-.orbit-pill::before {
-  content: '';
-  width: 6px;
-  height: 6px;
-  border-radius: 2px;
-  background: var(--text-muted);
+.pill-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: rgb(50, 49, 53);
+  flex-shrink: 0;
 }
 
-.orbit-pill:hover {
-  transform: scale(1.05);
-  border-color: var(--accent-green);
+.pill-label {
+  font-family: var(--font-main);
+  font-size: 14.5px;
+  font-weight: 500;
   color: #ffffff;
+  white-space: nowrap;
+  letter-spacing: -0.01em;
 }
 
-.orbit-pill:hover::before {
-  background: var(--accent-green);
-  box-shadow: 0 0 6px var(--accent-green);
-}
+/* Desktop Placement Coordinates */
+.pill-item-1 { top: 26%; left: 50%; }
+.pill-item-2 { top: 39%; left: 18%; }
+.pill-item-3 { top: 66%; left: 82%; }
+.pill-item-4 { top: 73%; left: 35%; }
+.pill-item-5 { top: 36%; left: 82%; }
 
-.pill-pos-1 { top: 12%; right: 4%; }
-.pill-pos-2 { bottom: 18%; left: 8%; }
-.pill-pos-3 { top: 18%; left: 14%; }
-.pill-pos-4 { bottom: 10%; right: 18%; }
-.pill-pos-5 { top: 48%; right: -5%; }
+/* Mobile Responsive Coordinates */
+@media (max-width: 810px) {
+  .sanjaya-pain-point-section {
+    height: 150vh;
+  }
+  .pill-item-1 { top: 14%; left: 50%; }
+  .pill-item-2 { top: 27%; left: 28%; }
+  .pill-item-3 { top: 66%; left: 66%; }
+  .pill-item-4 { top: 80%; left: 36%; }
+  .pill-item-5 { top: 38%; left: 72%; }
+  .pill-label { font-size: 12px; }
+  .pain-pill-item { padding: 9px 14px; gap: 8px; }
+}
 
 /* ==========================================================================
    OUR WORKS — STACKING CARDS SECTION (Sanjaya Layout)
@@ -2390,3 +2380,71 @@ ul, ol {
     display: none; /* Hide telemetry pill on mobile to save screen real estate */
   }
 }
+
+/* ==========================================================================
+   SANJAYA FRAMER VIEWPORT SCROLL REVEAL & FADE-IN ENGINE
+   ========================================================================== */
+.s-reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  will-change: opacity, transform;
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.s-reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delay tokens matching Framer spring cascade */
+.s-reveal[data-reveal-delay="1"] { transition-delay: 0.08s; }
+.s-reveal[data-reveal-delay="2"] { transition-delay: 0.16s; }
+.s-reveal[data-reveal-delay="3"] { transition-delay: 0.24s; }
+.s-reveal[data-reveal-delay="4"] { transition-delay: 0.32s; }
+.s-reveal[data-reveal-delay="5"] { transition-delay: 0.40s; }
+.s-reveal[data-reveal-delay="6"] { transition-delay: 0.48s; }
+.s-reveal[data-reveal-delay="7"] { transition-delay: 0.56s; }
+.s-reveal[data-reveal-delay="8"] { transition-delay: 0.64s; }
+.s-reveal[data-reveal-delay="9"] { transition-delay: 0.72s; }
+.s-reveal[data-reveal-delay="10"] { transition-delay: 0.80s; }
+
+/* Scale & Soft Blur reveal variant for featured cards & hero media */
+.s-reveal-scale {
+  opacity: 0;
+  transform: scale(0.96) translateY(24px);
+  filter: blur(4px);
+  will-change: opacity, transform, filter;
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.s-reveal-scale.in-view {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  filter: blur(0px);
+}
+
+/* Subtle fade only (no translate) for ambient or wide containers */
+.s-reveal-fade {
+  opacity: 0;
+  will-change: opacity;
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.s-reveal-fade.in-view {
+  opacity: 1;
+}
+
+/* Accessibility: respect user preferences for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .s-reveal,
+  .s-reveal-scale,
+  .s-reveal-fade {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
+  }
+}
